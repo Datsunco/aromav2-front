@@ -9,9 +9,9 @@ import { listCollections } from "@lib/data/collections"
 import EventsScroll from "@modules/home/components/event-scroll"
 
 export const metadata: Metadata = {
-  title: "Medusa Next.js Starter Template",
+  title: "Арома Вдохновение",
   description:
-    "A performant frontend ecommerce starter template with Next.js 15 and Medusa.",
+    "Сайт аромастудии",
 }
 
 export default async function Home(props: {
@@ -21,15 +21,15 @@ export default async function Home(props: {
 
   const { countryCode } = params
 
-  const region = await getRegion(countryCode)
+  // const region = await getRegion(countryCode)
 
-  const { collections } = await listCollections({
-    fields: "id, handle, title",
-  })
+  // const { collections } = await listCollections({
+  //   fields: "id, handle, title",
+  // })
 
-  if (!collections || !region) {
-    return null
-  }
+  // if (!region) {
+  //   return null
+  // }
 
   return (
     <>
@@ -37,11 +37,12 @@ export default async function Home(props: {
       
       <FeaturesPreview />
       <EventsScroll/>
-      <div className="py-12">
+      <div className="text-3xl">TEST</div>
+      {/* <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
         </ul>
-      </div>
+      </div> */}
     </>
   )
 }
