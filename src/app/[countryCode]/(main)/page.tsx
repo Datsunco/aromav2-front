@@ -37,7 +37,6 @@ export default async function Home(props: {
       
       <FeaturesPreview />
       <EventsScroll/>
-      <div className="text-3xl">TEST</div>
       {/* <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
