@@ -46,6 +46,20 @@ const testimonials: Testimonial[] = [
     text: "Я начала проверять базы данных, хорошо разбираться в системе налогообложения и работать в программе «1С:Бухгалтерия 8». Благодаря этому я добилась повышения и стала главным бухгалтером.",
     image: "/placeholder.svg?height=300&width=300",
   },
+  {
+    id: 3,
+    name: "Елена",
+    role: "Главный бухгалтер",
+    text: "Я начала проверять базы данных, хорошо разбираться в системе налогообложения и работать в программе «1С:Бухгалтерия 8». Благодаря этому я добилась повышения и стала главным бухгалтером.",
+    image: "/placeholder.svg?height=300&width=300",
+  },
+  {
+    id: 3,
+    name: "Елена",
+    role: "Главный бухгалтер",
+    text: "Я начала проверять базы данных, хорошо разбираться в системе налогообложения и работать в программе «1С:Бухгалтерия 8». Благодаря этому я добилась повышения и стала главным бухгалтером.",
+    image: "/placeholder.svg?height=300&width=300",
+  },
 ]
 
 export default function ReviewCarousel() {
@@ -94,10 +108,10 @@ export default function ReviewCarousel() {
         </div>
         <CarouselContent className="-ml-2 mr-2 flex items-center py-4">
           {testimonials.map((item, index) => (
-            <CarouselItem key={index} className={clx("pl-1 basis-4/6")}>
+            <CarouselItem key={index} className={clx("pl-1 md:basis-1/2 lg:basis-4/6")}>
               <div
                 className={clx(
-                  "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center aspect-[20/9]  px-0",
+                  "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center aspect-[24/9] px-0",
                   "cursor-pointer transition-all duration-200 hover:scale-[101%] hover:shadow-md"
                 )}
                 // style={{ backgroundImage: item.img }}
