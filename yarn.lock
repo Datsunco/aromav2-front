@@ -304,6 +304,9 @@
 "@humanwhocodes/object-schema@^1.2.1":
   version "1.2.1"
 
+"@img/sharp-win32-x64@0.33.5":
+  version "0.33.5"
+
 "@internationalized/date@^3.6.0":
   version "3.6.0"
   dependencies:
@@ -417,15 +420,8 @@
   dependencies:
     fast-glob "3.3.1"
 
-"@next/swc-linux-x64-gnu@15.0.3":
+"@next/swc-win32-x64-msvc@15.0.3":
   version "15.0.3"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.0.3.tgz"
-  integrity sha512-gWL/Cta1aPVqIGgDb6nxkqy06DkwJ9gAnKORdHWX1QBbSZZB+biFYPFti8aKIQL7otCE1pjyPaXpFzGeG2OS2w==
-
-"@next/swc-linux-x64-musl@15.0.3":
-  version "15.0.3"
-  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-15.0.3.tgz"
-  integrity sha512-QQEMwFd8r7C0GxQS62Zcdy6GKx999I/rTO2ubdXEe+MlZk9ZiinsrjwoiBL5/57tfyjikgh6GOU2WRQVUej3UA==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
