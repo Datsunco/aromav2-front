@@ -7,6 +7,7 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 import { getRegion } from "@lib/data/regions"
 import { listCollections } from "@lib/data/collections"
 import EventsScroll from "@modules/home/components/event-scroll"
+import AboutSection from "@modules/home/components/about"
 
 export const metadata: Metadata = {
   title: "Арома Вдохновение",
@@ -37,6 +38,7 @@ export default async function Home(props: {
       
       <FeaturesPreview />
       <EventsScroll/>
+      <AboutSection/>
       {/* <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
