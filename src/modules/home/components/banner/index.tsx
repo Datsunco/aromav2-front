@@ -17,6 +17,7 @@ import { sections } from "@modules/default/banner/data"
 import { useState } from "react"
 import ListIcon from "icons/list"
 import X from "@modules/common/icons/x"
+import ChevronDown from "@modules/common/icons/chevron-down"
 
 const Banner = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -87,25 +88,38 @@ const Banner = () => {
                   </div>
 
                   {/* Modal Content */}
-                  <div className="p-4 h-full overflow-y-auto">
-                    <div className="flex gap-2 overflow-x-auto py-2 mb-4">
-                      <Button
-                        variant="secondary"
-                        className="whitespace-nowrap rounded-full"
+                  <div className=" h-full overflow-y-auto pt-2">
+                    <div className="flex gap-2 overflow-x-auto py-2 mb-4 h-14 px-2">
+                      <LocalizedClientLink
+                        href="/"
+                        className="whitespace-nowrap rounded-full bg-[#3d3bff] text-white text-base flex items-center gap-1 min-w-[90px] font-medium justify-center"
                       >
-                        Каталог
-                      </Button>
-                      <Button className="whitespace-nowrap rounded-full flex items-center gap-2">
-                        <span>Для детей</span>
-                        <span>›</span>
-                      </Button>
-                      <Button className="whitespace-nowrap rounded-full flex items-center gap-2">
-                        <span>Онлайн-колледж</span>
-                        <span>›</span>
-                      </Button>
+                        <span>Главная</span>
+                      </LocalizedClientLink>
+                      <LocalizedClientLink
+                        href="/about-us"
+                        className="whitespace-nowrap rounded-full bg-[#EBEBEB] text-black text-base flex items-center gap-1 min-w-32 font-medium justify-center"
+                      >
+                        <span>О студии</span>
+                        <ChevronDown className="-rotate-90" />
+                      </LocalizedClientLink>
+                      <LocalizedClientLink
+                        href="/about-us"
+                        className="whitespace-nowrap rounded-full bg-[#EBEBEB] text-black text-base flex items-center gap-1 min-w-36 font-medium justify-center"
+                      >
+                        <span>Записаться</span>
+                        <ChevronDown className="-rotate-90" />
+                      </LocalizedClientLink>
+                      <LocalizedClientLink
+                        href="/about-us"
+                        className="whitespace-nowrap rounded-full bg-[#EBEBEB] text-black text-base flex items-center gap-1 min-w-32 font-medium justify-center"
+                      >
+                        <span>О студии</span>
+                        <ChevronDown className="-rotate-90" />
+                      </LocalizedClientLink>
                     </div>
 
-                    <div className="space-y-6">
+                    <div className="space-y-4 px-4">
                       {sections.map((item, index) => (
                         <LocalizedClientLink
                           href={item.link}
