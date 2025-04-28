@@ -17,7 +17,7 @@ export default function IndividualAromaTemplate({}: {}) {
       {/* главная секция */}
       <section className="max-w-6xl mx-auto flex flex-col mt-8">
         <div className="px-2 lg:px-0">
-          <Banner img="/images/wonem-meet.png" title={"Прием ароматерапевта"} />
+          <Banner img="/images/wonem-meet.png" title={"Индивидуальный прием ароматерапевта"} />
         </div>
         <InfoBlock />
         <SecondInfoBlock />

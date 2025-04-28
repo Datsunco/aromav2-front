@@ -4,21 +4,24 @@ import React from "react"
 const InfoBlock = () => {
   return (
     <section className="w-full  bg-white mt-20">
-      <div className="container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+      <div className="container mx-auto md:px-4 py-12 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Left column - Text content */}
         <div className="w-full md:w-1/3 space-y-6">
           <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
             <span className="font-literature text-3xl text-blue-400">
-            Ароматерапия
+              Ароматерапия
             </span>{" "}
-            — метод оздоровления человека
+            — гармония здоровья через силу эфирных масел
           </h1>
           <p className="text-lg/5 font-medium text-gray-600 max-w-xl font-acrom">
-            Вы удивитесь, насколько точно Ваш нос расскажет о Вашем состоянии,
-            об истинных желаниях, целях, потребностях, и укажет Вам путь для
-            поддержки и помощи. Через диагностику Вы выберете те ароматы, а
-            значит и биохимические молекулы, которые нужны именно Вам и именно
-            сейчас для решения задач.
+            Ароматерапия — это метод гармонизации здоровья по биохимическим,
+            психоэмоциональным и физическим параметрам с помощью целебной силы
+            растений, заключённой в молекулах эфирных масел.
+            <br />
+    
+            <br />
+            Вы удивитесь, насколько точно ароматы расскажут о вашем состоянии и
+            потребностях. Это всегда 100% попадание в решении вашей задачи.
           </p>
         </div>
 
