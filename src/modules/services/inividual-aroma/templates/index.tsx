@@ -25,7 +25,7 @@ export default function IndividualAromaTemplate({}: {}) {
       </section>
       <ReviewCarousel />
 
-      <div className="md:hidden fixed bottom-0 w-full bg-white rounded-t-3xl h-20 flex justify-center items-center shadow-inner">
+      <div className="md:hidden z-50 fixed bottom-0 w-full bg-white rounded-t-3xl h-20 flex justify-center items-center shadow-inner">
         <button className="py-3 w-full mx-7 rounded-xl bg-blue-600 text-white font-acrom font-medium text-lg">
           Записаться на прием
         </button>
