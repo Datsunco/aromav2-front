@@ -6,7 +6,7 @@ import Banner from "../components/banner"
 import InfoBlock from "../components/info-first-block"
 import SecondInfoBlock from "../components/info-second-block"
 import InfoThirdBlock from "../components/info-third-block"
-import ReviewCarousel from "../components/reviews"
+import ReviewCarousel from "@modules/default/reviews"
 
 export default function FamilyAromaTemplate({}: {}) {
   return (

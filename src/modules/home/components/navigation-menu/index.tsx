@@ -129,7 +129,7 @@ export function NavigationMenuDemo({ className }: { className: string }) {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/about-us" legacyBehavior passHref>
             <NavigationMenuLink
               className={clsx(
                 navigationMenuTriggerStyle(),

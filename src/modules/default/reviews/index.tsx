@@ -106,27 +106,27 @@ export default function ReviewCarousel() {
             <CarouselNext className="w-10 h-10 flex" />
           </div>
         </div>
-        <CarouselContent className="-ml-2 mr-2 flex items-center py-4">
+        <CarouselContent className="-ml-2 mr-2 flex items-center pl-1 py-4">
           {testimonials.map((item, index) => (
-            <CarouselItem key={index} className={clx("pl-1 md:basis-1/2 lg:basis-4/6")}>
+            <CarouselItem key={index} className={clx("pl-1 basis-4/6")}>
               <div
                 className={clx(
-                  "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center aspect-[24/9] px-0",
+                  "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center aspect-[9/16] md:aspect-[24/9] px-0",
                   "cursor-pointer transition-all duration-200 hover:scale-[101%] hover:shadow-md"
                 )}
                 // style={{ backgroundImage: item.img }}
               >
-                <div className="flex p-0 h-full py-4 px-4">
+                <div className="flex flex-col items-center md:flex-row p-0 h-full py-4 px-4 overflow-hidden">
                   <img
                     src="/images/creationaromo.png"
-                    className=" rounded-3xl aspect-square"
+                    className="rounded-3xl max-h-52"
                   />
-                  <div className="w-full mt-auto mb-4 mx-10 flex justify-between items-end">
-                    <div className="flex flex-col">
+                  <div className="w-full mt-auto mx-auto mb-4 md:mx-10 flex justify-between items-end">
+                    <div className="flex flex-col overflow-hidden">
                       <span className="font-acrom text-3xl mb-4 font-semibold text-white drop-shadow-lg group-hover:underline transition-all duration-300">
                         Чей-то отзыв
                       </span>
-                      <span className="text-lg text-white drop-shadow-md">
+                      <span className="text-lg text-white drop-shadow-md ">
                         Очень долгая история о том как комуто очень понравилось.
                         Очень долгая история о том как комуто очень понравилось.
                         Очень долгая история о том как комуто очень понравилось.

@@ -8,6 +8,7 @@ import X from "@modules/common/icons/x"
 import { Button } from "@medusajs/ui"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import { cn } from "@lib/util/cn"
 // import { Card } from "@/components/ui/card"
 
 export default function AboutSection() {
@@ -23,9 +24,9 @@ export default function AboutSection() {
 
   return (
     <div className="px-2">
-      <section className="w-full max-w-6xl mx-auto px-4 md:px-20 py-16 md:py-16 bg-[#F5F5F5] rounded-3xl mt-40">
-        <div className="flex mb-10 items-center justify-between">
-          <div className="font-acrom block text-2xl md:text-4xl font-bold mb-8 max-w-xl md:max-w-2xl ">
+      <section className="w-full max-w-6xl mx-auto px-4 md:px-20 py-10 md:py-16 bg-[#F5F5F5] rounded-3xl">
+        <div className="flex mb-10 md:mb-20  items-center gap-4 justify-between">
+          <div className="font-acrom block items-center text-2xl md:text-4xl font-bold max-w-xl md:max-w-2xl ">
             Ароматстудия {""}
             <span className="font-literature text-[#2563EB] w-fit">
               «Вдохновение»
@@ -43,26 +44,26 @@ export default function AboutSection() {
           </LocalizedClientLink>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          <div className="lg:col-span-6">
+          <div className="lg:col-span-8">
             <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-200">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/photo.png"
                 alt="Ароматстудия Вдохновение"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+              {/* <div className="absolute inset-0 flex items-center justify-center bg-black/30">
                 <button className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
                   <X className="w-6 h-6 ml-1" />
                 </button>
               </div>
               <div className="absolute bottom-4 left-4 text-white text-sm font-medium">
                 Как мы создаём индивидуальные ароматерапевтические композиции
-              </div>
+              </div> */}
             </div>
           </div>
 
-          <div className="lg:col-span-6 flex flex-col gap-4">
+          <div className="lg:col-span-4 flex flex-col gap-4">
             <div className="p-6 rounded-xl bg-white">
               <div className="flex justify-between items-start">
                 <div>
@@ -73,9 +74,14 @@ export default function AboutSection() {
                 </div>
                 <button
                   onClick={() => toggleCard("experience")}
-                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center"
+                  className="p-2 rounded-full bg-gray-100 flex items-center justify-center"
                 >
-                  <X className="w-5 h-5 rotate-45" />
+                  <X
+                    className={cn(
+                      "w-5 h-5 rotate-45 duration-150 transition-all",
+                      expandedCard === "experience" && "rotate-0"
+                    )}
+                  />
                 </button>
               </div>
 
@@ -101,9 +107,14 @@ export default function AboutSection() {
                 </div>
                 <button
                   onClick={() => toggleCard("natural")}
-                  className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center"
+                  className="p-2 rounded-full bg-white/20 flex items-center justify-center"
                 >
-                  <X className="w-5 h-5 rotate-45" />
+                  <X
+                    className={cn(
+                      "w-5 h-5 rotate-45 duration-150 transition-all",
+                      expandedCard === "natural" && "rotate-0"
+                    )}
+                  />
                 </button>
               </div>
 

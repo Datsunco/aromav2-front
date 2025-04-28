@@ -8,11 +8,11 @@ import { getRegion } from "@lib/data/regions"
 import { listCollections } from "@lib/data/collections"
 import EventsScroll from "@modules/home/components/event-scroll"
 import AboutSection from "@modules/home/components/about"
+import ReviewCarousel from "@modules/default/reviews"
 
 export const metadata: Metadata = {
   title: "Арома Вдохновение",
-  description:
-    "Сайт аромастудии",
+  description: "Сайт аромастудии",
 }
 
 export default async function Home(props: {
@@ -35,10 +35,13 @@ export default async function Home(props: {
   return (
     <>
       <Banner />
-      
+
       <FeaturesPreview />
-      <EventsScroll/>
-      <AboutSection/>
+      <EventsScroll />
+      <div className="mt-40">
+        <AboutSection />
+      </div>
+      <ReviewCarousel />
       {/* <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />
