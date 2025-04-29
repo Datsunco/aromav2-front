@@ -97,18 +97,18 @@ export default function ReviewCarousel() {
           slidesToScroll: 1,
         }}
       >
-        <div className="flex ">
+        <div className="flex mx-auto">
           <h1 className="text-5xl font-medium font-acrom max-w-xl mb-10 text-center mx-auto">
             Отзывы клиентов
           </h1>
-          <div className="relative flex w-[1px] mr-20 mb-8">
+          <div className="hidden md:flex relative flex w-[1px] mr-20 mb-8">
             <CarouselPrevious className="w-10 h-10 flex" />
             <CarouselNext className="w-10 h-10 flex" />
           </div>
         </div>
         <CarouselContent className="-ml-2 mr-2 flex items-center pl-1 py-4">
           {testimonials.map((item, index) => (
-            <CarouselItem key={index} className={clx("pl-1 basis-4/6")}>
+            <CarouselItem key={index} className={clx("pl-1 basis-5/6")}>
               <div
                 className={clx(
                   "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center aspect-[9/16] md:aspect-[24/9] px-0",
