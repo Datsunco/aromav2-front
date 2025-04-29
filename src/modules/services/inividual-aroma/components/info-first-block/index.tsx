@@ -4,9 +4,9 @@ import React from "react"
 const InfoBlock = () => {
   return (
     <section className="w-full  bg-white mt-20">
-      <div className="container mx-auto md:px-4 py-12 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+      <div className="px-4 mx-auto  py-12 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Left column - Text content */}
-        <div className="w-full md:w-1/3 space-y-6">
+        <div className="w-full px-4 md:px-0 md:w-1/3 space-y-6">
           <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
             <span className="font-literature text-3xl text-blue-400">
               Ароматерапия
@@ -18,7 +18,6 @@ const InfoBlock = () => {
             психоэмоциональным и физическим параметрам с помощью целебной силы
             растений, заключённой в молекулах эфирных масел.
             <br />
-    
             <br />
             Вы удивитесь, насколько точно ароматы расскажут о вашем состоянии и
             потребностях. Это всегда 100% попадание в решении вашей задачи.
