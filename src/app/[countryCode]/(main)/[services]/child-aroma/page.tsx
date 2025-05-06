@@ -1,4 +1,4 @@
-import ChildAromaTemplate from "@modules/services/child-aroma/templates"
+import ChildAromaTemplate from "@modules/services/aromatherapy/child-aroma/templates"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -7,5 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default async function ChildAromatherapy() {
-  return <ChildAromaTemplate/>
+  return <ChildAromaTemplate />
 }

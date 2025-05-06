@@ -1,5 +1,5 @@
 import GirlsTemplate from "@modules/girls/templates"
-import FamilyAromaTemplate from "@modules/services/family-aroma/templates"
+import FamilyAromaTemplate from "@modules/services/aromatherapy/family-aroma/templates"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {

@@ -1,4 +1,4 @@
-import IndividualAromaTemplate from "@modules/services/inividual-aroma/templates"
+import IndividualAromaTemplate from "@modules/services/aromatherapy/inividual-aroma/templates"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {

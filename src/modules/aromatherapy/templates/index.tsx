@@ -1,9 +1,5 @@
 "use client"
 
-import InfoBlock from "../components/info-first-block"
-import SecondInfoBlock from "../components/info-second-block"
-import InfoThirdBlock from "../components/info-third-block"
-
 import Header from "@modules/default/header"
 import Banner from "@modules/default/banner"
 import ServiceList from "@modules/default/service"
@@ -52,9 +48,6 @@ export default function AromatherapyTemplate({}: {}) {
           <div className="">Сортировка</div>
           <ServiceList serviceList={data} />
         </div>
-        {/* <InfoBlock />
-        <SecondInfoBlock />
-        <InfoThirdBlock /> */}
       </section>
     </div>
   )

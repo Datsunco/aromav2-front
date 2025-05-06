@@ -101,7 +101,7 @@ export default function ReviewCarousel() {
           <h1 className="text-5xl font-medium font-acrom max-w-xl mb-10 text-center mx-auto">
             Отзывы клиентов
           </h1>
-          <div className="hidden md:flex relative flex w-[1px] mr-20 mb-8">
+          <div className="hidden md:flex relative w-[1px] mr-20 mb-8">
             <CarouselPrevious className="w-10 h-10 flex" />
             <CarouselNext className="w-10 h-10 flex" />
           </div>
