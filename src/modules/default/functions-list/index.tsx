@@ -12,6 +12,7 @@ import { type CarouselApi } from "components/carousel"
 
 import Image from "next/image"
 import { cn } from "@lib/util/cn"
+import Link from "next/link"
 
 // Course data
 const courses = [
@@ -21,6 +22,7 @@ const courses = [
     image: "/images/course1.jpg",
     courses: 42,
     color: "bg-orange-800/80",
+    link: "/potential",
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ const courses = [
     image: "/images/course2.jpg",
     courses: 36,
     color: "bg-stone-500/80",
+    link: "/name-energy",
   },
   {
     id: 3,
@@ -35,6 +38,7 @@ const courses = [
     image: "/images/course3.jpg",
     courses: 55,
     color: "bg-slate-800/80",
+    link: "/name-energy",
   },
   {
     id: 4,
@@ -42,6 +46,7 @@ const courses = [
     image: "/images/course4.jpg",
     courses: 39,
     color: "bg-fuchsia-500",
+    link: "/name-energy",
   },
   {
     id: 5,
@@ -49,6 +54,7 @@ const courses = [
     image: "/images/course5.jpg",
     courses: 5,
     color: "bg-gray-700/80",
+    link: "/name-energy",
   },
   {
     id: 6,
@@ -56,6 +62,7 @@ const courses = [
     image: "/images/course6.jpg",
     courses: 27,
     color: "bg-sky-500/80",
+    link: "/name-energy",
   },
   {
     id: 7,
@@ -63,6 +70,7 @@ const courses = [
     image: "/images/course7.jpg",
     courses: 48,
     color: "bg-emerald-800/80",
+    link: "/name-energy",
   },
   {
     id: 8,
@@ -70,6 +78,7 @@ const courses = [
     image: "/images/course1.jpg",
     courses: 42,
     color: "bg-orange-800/80",
+    link: "/name-energy",
   },
   {
     id: 9,
@@ -77,6 +86,7 @@ const courses = [
     image: "/images/course2.jpg",
     courses: 36,
     color: "bg-stone-500/80",
+    link: "/name-energy",
   },
   {
     id: 10,
@@ -84,6 +94,7 @@ const courses = [
     image: "/images/course3.jpg",
     courses: 55,
     color: "bg-slate-800/80",
+    link: "/name-energy",
   },
   {
     id: 11,
@@ -91,6 +102,7 @@ const courses = [
     image: "/images/course4.jpg",
     courses: 39,
     color: "bg-fuchsia-500",
+    link: "/name-energy",
   },
   {
     id: 12,
@@ -98,6 +110,7 @@ const courses = [
     image: "/images/course5.jpg",
     courses: 5,
     color: "bg-gray-700/80",
+    link: "/name-energy",
   },
   {
     id: 13,
@@ -105,6 +118,7 @@ const courses = [
     image: "/images/course6.jpg",
     courses: 27,
     color: "bg-sky-500/80",
+    link: "/name-energy",
   },
   {
     id: 14,
@@ -112,6 +126,7 @@ const courses = [
     image: "/images/course7.jpg",
     courses: 48,
     color: "bg-emerald-800/80",
+    link: "/name-energy",
   },
 ]
 
@@ -147,7 +162,7 @@ export default function FunctionsList() {
   return (
     <div className=" mx-auto mt-24">
       <div className="text-center mb-4 md:mb-12">
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto font-acrom">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto font-acrom">
           Исследуйте свои возможности
           {/* <br /> */}
           {/* на пути к     своей цели */}
@@ -169,9 +184,14 @@ export default function FunctionsList() {
               key={course.id}
               className="custom-basis pl-4 transition-all ease-in-out"
             >
-              <div className="py-2">
-                <CourseCard course={course} isCenter={index === currentIndex} />
-              </div>
+              <Link href={`/functions${course.link}`}>
+                <div className="py-2">
+                  <CourseCard
+                    course={course}
+                    isCenter={index === currentIndex}
+                  />
+                </div>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
