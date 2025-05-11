@@ -6,10 +6,10 @@ interface FactsBlockProps {
   features: { title: string; description: string }[]
 }
 
-const FactsBlock = ({title, features }: FactsBlockProps) => {
+const FactsBlock = ({ title, features }: FactsBlockProps) => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 mt-10">
-      <h1 className="text-5xl font-semibold mb-16 font-acrom">
+      <h1 className="text-4xl md:text-5xl font-semibold mb-16 font-acrom">
         {title}
       </h1>
 

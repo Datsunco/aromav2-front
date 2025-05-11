@@ -91,13 +91,15 @@ export default function ReviewCarousel() {
           ]
         }
         setApi={setApi}
-        className="mx-auto w-full max-w-6xl"
+        className="mx-auto w-full"
         opts={{
           align: "center", // Выравнивание по началу
           slidesToScroll: 1,
+          loop: true,
+          skipSnaps: true,
         }}
       >
-        <div className="flex mx-auto">
+        <div className="max-w-5xl flex mx-auto">
           <h1 className="text-5xl font-medium font-acrom max-w-xl mb-10 text-center mx-auto">
             Отзывы клиентов
           </h1>

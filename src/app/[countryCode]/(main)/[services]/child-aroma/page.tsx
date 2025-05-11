@@ -2,8 +2,8 @@ import ChildAromaTemplate from "@modules/services/aromatherapy/child-aroma/templ
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Ароматерапия для пары",
-  description: "Ароматерапия для пары",
+  title: "Ароматерапия для детей",
+  description: "Ароматерапия для детей",
 }
 
 export default async function ChildAromatherapy() {

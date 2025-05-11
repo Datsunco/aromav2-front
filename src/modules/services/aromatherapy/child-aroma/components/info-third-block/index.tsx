@@ -7,19 +7,19 @@ import clsx from "clsx"
 
 const data = [
   {
-    title: "Постепенно погрузитесь в профессию",
+    title: "Погружение в себя через ароматы",
     description:
-      "Изучите основы математики и статистики, а затем на продвинутом уровне изучите машинное обучение или анализ данных на выбор.",
+      "Ароматы помогают раскрыть истинные желания, цели и потребности, указывая путь к гармонии и балансу.",
   },
   {
-    title: "Постепенно погрузитесь профессию",
+    title: "Ресурсное состояние",
     description:
-      "Изучите основы математики и статистики, а затем на продвинутом уровне изучите машинное обучение или анализ данных на выбор.",
+      "Когда тело получает необходимый ресурс через эфирные масла, появляется энергия, новые мысли и силы для перемен.",
   },
   {
-    title: "Постепенно профессию",
+    title: "Профессиональный подход",
     description:
-      "Изучите основы математики и статистики, а затем на продвинутом уровне изучите машинное обучение или анализ данных на выбор.",
+      "Я работаю по методу Арома-код, основанному на опыте моего Учителя Бобковой Наталии Юрьевны, чтобы вы получили максимальный результат.",
   },
 ]
 
@@ -27,8 +27,8 @@ const InfoThirdBlock = () => {
   const [selected, setSelected] = useState<number>(0)
 
   return (
-    <section className="w-full  bg-white mt-20">
-      <div className="container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+    <section className="w-full  bg-white -mt-10">
+      <div className="mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
         {/* Right column - Image */}
         <div className="w-full md:w-2/3 h-full">
           <div className="relative w-full h-[400px] md:h-[500px] lg:h-[400px] rounded-[25px] overflow-hidden">
@@ -42,7 +42,7 @@ const InfoThirdBlock = () => {
           </div>
         </div>
         {/* Left column - Text content */}
-        <div className="w-full md:w-1/3 space-y-6">
+        <div className="px-4 md:px-0 w-full md:w-1/3 space-y-6">
           {data.map((el, index) => (
             <div
               className={clsx(

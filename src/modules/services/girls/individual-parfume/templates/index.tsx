@@ -140,7 +140,7 @@ const imageCollapsibleData = [
       "Мы используем только натуральные эфирные масла высшего качества, чтобы ваши духи были не только ароматными, но и полезными.",
   },
   {
-    img: "/images/event/individual-parfume/2.jpg",
+    img: "/images/event/individual-parfume/aroma-process.jpg",
     title: "Творческий процесс",
     description:
       "Создайте аромат, который будет отражать вашу индивидуальность - свежий, цветочный, древесный или ориентальный.",
@@ -193,8 +193,8 @@ export default function IndividualPerfumeTemplate() {
 
         <InfoBlock
           imgSrc={[
-            "/images/event/aroma-dress.jpg",
-            "/images/event/aroma-dress.jpg",
+            "/images/event/individual-parfume/aroma-dress.jpg",
+            "/images/event/individual-parfume/aroma-dress.jpg",
           ]}
         >
           <>
