@@ -2,6 +2,21 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* globals.css */
+.custom-basis {
+  flex-basis: 75%;
+}
+@screen md {
+  .custom-basis {
+    flex-basis: 50%;
+  }
+}
+@screen lg {
+  .custom-basis {
+    flex-basis: 25%;
+  }
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

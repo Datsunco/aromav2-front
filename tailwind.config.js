@@ -10,6 +10,16 @@ module.exports = {
     "./src/modules/**/*.{js,ts,jsx,tsx}",
     "./node_modules/@medusajs/ui/dist/**/*.{js,jsx,ts,tsx}",
   ],
+  safelist: [
+    "basis-4/5",
+    "basis-1/2",
+    "basis-1/3",
+
+    "md:basis-1/2",
+    "lg:basis-1/3",
+    { pattern: /basis-.+/ },
+    { pattern: /pl-.+/ },
+  ],
   theme: {
     extend: {
       transitionProperty: {
@@ -36,8 +46,8 @@ module.exports = {
         },
       },
       backdropFilter: {
-        'none': 'none',
-        'blur': 'blur(8px)',
+        none: "none",
+        blur: "blur(8px)",
       },
       borderRadius: {
         none: "0px",

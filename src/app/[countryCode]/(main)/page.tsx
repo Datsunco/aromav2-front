@@ -9,6 +9,7 @@ import { listCollections } from "@lib/data/collections"
 import EventsScroll from "@modules/home/components/event-scroll"
 import AboutSection from "@modules/home/components/about"
 import ReviewCarousel from "@modules/default/reviews"
+import FunctionsList from "@modules/default/functions-list"
 
 export const metadata: Metadata = {
   title: "Арома Вдохновение",
@@ -35,7 +36,7 @@ export default async function Home(props: {
   return (
     <>
       <Banner />
-
+      <FunctionsList />
       <FeaturesPreview />
       <EventsScroll />
       <div className="mt-40">

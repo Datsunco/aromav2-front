@@ -108,7 +108,11 @@ export default function ReviewCarousel() {
         </div>
         <CarouselContent className="-ml-2 mr-2 flex items-center pl-1 py-4">
           {testimonials.map((item, index) => (
-            <CarouselItem key={index} className={clx("pl-1 basis-5/6")}>
+            <CarouselItem
+              key={index}
+              className="pl-1"
+              style={{ flexBasis: "83.333333%" }}
+            >
               <div
                 className={clx(
                   "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center aspect-[9/16] md:aspect-[24/9] px-0",
