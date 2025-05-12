@@ -17,6 +17,21 @@
   }
 }
 
+
+.custom-review {
+  flex-basis: 80%;
+}
+@screen md {
+  .custom-review {
+    flex-basis: 75%;
+  }
+}
+@screen lg {
+  .custom-review {
+    flex-basis: 65%;
+  }
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {

@@ -108,17 +108,20 @@ export default function ReviewCarousel() {
             <CarouselNext className="w-10 h-10 flex" />
           </div>
         </div>
-        <CarouselContent className="-ml-2 mr-2 flex items-center pl-1 py-4">
+        <CarouselContent className="-ml-2 mr-2 flex items-center pl-1 py-4 min-h-[550px] md:min-h-[530px] lg:min-h-[430px]">
           {testimonials.map((item, index) => (
             <CarouselItem
               key={index}
-              className="pl-1"
-              style={{ flexBasis: "83.333333%" }}
+              className=" custom-review pl-1"
+              // style={{ flexBasis: "65.333333%" }}
             >
               <div
                 className={clx(
-                  "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center aspect-[9/16] md:aspect-[24/9] px-0",
-                  "cursor-pointer transition-all duration-200 hover:scale-[101%] hover:shadow-md"
+                  "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center  px-0",
+                  "cursor-pointer transition-all duration-500",
+                  index === current
+                    ? "h-[500px] md:h-[480px] lg:h-[380px] scale-105 z-10"
+                    : "h-[420px] md:h-[420px] lg:h-[320px] scale-95 opacity-80"
                 )}
                 // style={{ backgroundImage: item.img }}
               >
