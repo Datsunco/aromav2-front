@@ -73,7 +73,7 @@ export default function ReviewCarousel() {
     }
 
     setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
+    setCurrent(api.selectedScrollSnap())
 
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap())
@@ -83,13 +83,11 @@ export default function ReviewCarousel() {
   return (
     <div className="mx-auto mt-20">
       <Carousel
-        plugins={
-          [
-            //   Autoplay({
-            //     delay: 3000,
-            //   }),
-          ]
-        }
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
         setApi={setApi}
         className="mx-auto w-full"
         opts={{
@@ -110,11 +108,7 @@ export default function ReviewCarousel() {
         </div>
         <CarouselContent className="-ml-2 mr-2 flex items-center pl-1 py-4 min-h-[550px] md:min-h-[530px] lg:min-h-[430px]">
           {testimonials.map((item, index) => (
-            <CarouselItem
-              key={index}
-              className=" custom-review pl-1"
-              // style={{ flexBasis: "65.333333%" }}
-            >
+            <CarouselItem key={index} className=" custom-review pl-1">
               <div
                 className={clx(
                   "rounded-3xl bg-[#666666]/60 flex items-center bg-contain justify-center  px-0",
