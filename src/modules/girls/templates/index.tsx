@@ -11,7 +11,7 @@ const data: ServiceCardType[] = [
   {
     type: "Мероприятие",
     title: "Создание ресурсного аромата",
-    link: "/services/resource-parfume",
+    link: "/services/resource-aroma",
     img: "/images/creationaromo.png",
     time: "3 часа",
     classname: "bg-[#FFEFC8]",
