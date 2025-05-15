@@ -104,11 +104,6 @@ const bannerFeatures = [
       "Используем только проверенные и разрешённые для детей эфирные масла.",
   },
   {
-    title: "Игровой формат",
-    description:
-      "Сеанс проходит в лёгкой игровой форме, комфортной для ребёнка.",
-  },
-  {
     title: "Простота применения",
     description:
       "Программа разрабатывается с учётом удобства для детей и родителей.",
@@ -122,19 +117,19 @@ const bannerFeatures = [
 
 const imageCollapsibleData = [
   {
-    img: "/images/child-therapy-1.jpg",
+    img: "/images/aromotherapy/child/girl_photo.jpg",
     title: "Ароматерапия для школьников",
     description:
       "Помогает справляться с учебной нагрузкой и повышает концентрацию.",
   },
+  // {
+  //   img: "/images/child-therapy-2.jpg",
+  //   title: "Игровое тестирование",
+  //   description:
+  //     "Дети в увлекательной форме знакомятся с ароматами и выбирают свои.",
+  // },
   {
-    img: "/images/child-therapy-2.jpg",
-    title: "Игровое тестирование",
-    description:
-      "Дети в увлекательной форме знакомятся с ароматами и выбирают свои.",
-  },
-  {
-    img: "/images/child-therapy-3.jpg",
+    img: "/images/aromotherapy/child/girl_photo.jpg",
     title: "Семейный подход",
     description: "Родители активно участвуют в процессе и помогают ребёнку.",
   },
@@ -143,8 +138,7 @@ const imageCollapsibleData = [
 const factsBlockData = [
   {
     title: "Возрастные ограничения",
-    description:
-      "Работаю с детьми с 9 лет. Для младшего возраста требуется особый подход и консультация.",
+    description: "Работаю с детьми с 9 лет.",
   },
   {
     title: "Роль родителей",
@@ -177,7 +171,7 @@ export default function ChildrenAromaTherapy() {
         </div>
 
         <div className="mt-40">
-          <InfoBlock imgSrc={["/images/child-main.jpg"]}>
+          <InfoBlock imgSrc={["/images/aromotherapy/child/girl_photo.jpg"]}>
             <>
               <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
                 <span className="font-literature text-3xl text-blue-400">

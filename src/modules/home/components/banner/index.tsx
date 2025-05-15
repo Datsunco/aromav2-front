@@ -141,8 +141,11 @@ const Banner = () => {
         <div className="flex px-4 py-6 lg:py-16  justify-between">
           <div className="max-w-2xl">
             <h1 className="text-4xl lg:text-5xl font-bold font-acrom text-white mb-10 lg:mb-16 ">
-              Найди себя и свое новое{" "}
-              <span className="text-blue-600 font-literature">Вдохновение</span>
+              <span className="text-blue-600 font-literature">Вдох</span> <br />
+              чтобы выдыхать
+              <br />
+              <span className="text-blue-600 font-literature">Любовь</span>{" "}
+              <br />{" "}
             </h1>
             <div className="flex flex-wrap gap-3 ">
               {sections.map((category) => (

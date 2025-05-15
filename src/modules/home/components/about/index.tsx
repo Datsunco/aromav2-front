@@ -27,7 +27,7 @@ export default function AboutSection() {
       <section className="w-full max-w-6xl mx-auto px-4 md:px-20 py-10 md:py-16 bg-[#F5F5F5] rounded-3xl">
         <div className="flex mb-10 md:mb-20  items-center gap-4 justify-between">
           <div className="font-acrom block items-center text-2xl md:text-4xl font-bold max-w-xl md:max-w-2xl ">
-            Ароматстудия {""}
+            Студия ароматерапии {""}
             <span className="font-literature text-[#2563EB] w-fit">
               «Вдохновение»
             </span>
@@ -47,7 +47,7 @@ export default function AboutSection() {
           <div className="lg:col-span-8">
             <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-200">
               <Image
-                src="/images/photo.png"
+                src="/images/moms_photo.jpg"
                 alt="Ароматстудия Вдохновение"
                 fill
                 className="object-cover"
@@ -69,7 +69,8 @@ export default function AboutSection() {
                 <div>
                   <h3 className="text-4xl font-bold">С 2019</h3>
                   <p className="text-gray-600 mt-2">
-                    помогаем людям жить в гармонии с собой и быть счастливее
+                    года помогаем людям жить в гармонии с собой и быть
+                    счастливее
                   </p>
                 </div>
                 <button
@@ -137,8 +138,8 @@ export default function AboutSection() {
               Специалист в области ароматерапии
             </h3>
             <p className=" text-[#666666] mt-auto mb-0">
-              Выпускница и наставник международной Академии ароматерапии
-              Арома-Код Н.Ю.Бобковой.
+              Жанна Доценко выпускница и наставник международной Академии
+              ароматерапии Арома-Код Н.Ю.Бобковой.
             </p>
           </div>
 

@@ -16,7 +16,7 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 
 // Можно вынести в отдельный файл с данными
 const categories = [
-  { icon: "</>" as const, label: "Аромотерапия", link: "/aromatherapy" },
+  { icon: "</>" as const, label: "Ароматерапия", link: "/aromatherapy" },
   { icon: "📊" as const, label: "Девичник", link: "/girls" },
   { icon: "📈" as const, label: "Нумерология", link: "/numerology" },
   { icon: "🎮" as const, label: "Женские встречи", link: "/women-meet" },
