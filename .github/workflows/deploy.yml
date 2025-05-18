@@ -32,6 +32,6 @@ jobs:
           script: |
             cd /home/ubuntu/projects/aromav2/aroma-storefront
             git pull origin main
-            npm install --production
+            npm install
             npm run build
             pm2 restart aroma
