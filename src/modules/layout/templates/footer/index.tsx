@@ -27,7 +27,7 @@ export default async function Footer() {
               <Comma className="w-5 h-5" />
             </div>
             <span className="font-acrom uppercase font-normal text-base text-center">
-              Москва, ул. Михалковская, дом 63Б строение 1, офис 3/1
+              г. Мытиши, ул. Веры Волошиной, дом 14, бизнес-центр Разумихин
             </span>
           </div>
 
@@ -39,7 +39,7 @@ export default async function Footer() {
               <Comma className="w-5 h-5" />
             </div>
             <span className="font-acrom uppercase font-normal text-base text-center">
-              8 993 266-55-96
+              8 916 675-78-95
             </span>
           </div>
 
@@ -51,13 +51,14 @@ export default async function Footer() {
               <Comma className="w-5 h-5" />
             </div>
             <span className="font-acrom uppercase font-normal text-base ">
-              info@osterrig.ru
+              телеграмм
+              <br /> @zhannadotsenko
             </span>
           </div>
         </div>
 
         {/* Основная часть */}
-        <div className="grid grid-flow-row grid-cols-2 md:flex md:flex-row gap-y-4 justify-between w-full pt-10 md:pt-40 px-10 md:px-10 lg:px-20 pb-20 ">
+        <div className="grid grid-flow-row grid-cols-2 md:flex md:flex-row gap-y-4 justify-between w-full pt-10 md:pt-40 px-4 md:px-10 lg:px-20 pb-20 ">
           <div className="flex flex-col gap-y-4">
             <Image
               src="/circlelogo.png"
@@ -99,135 +100,136 @@ export default async function Footer() {
               <Comma className="w-5 h-5" />
             </div>
             <span className="px-3 font-acrom uppercase font-normal text-xs text-white">
-              Москва, ул. Михалковская, дом 63Б строение 1, офис 3/1
+              г. Мытиши, ул. Веры Волошиной, дом 14, бизнес-центр Разумихин
             </span>
           </div>
 
           <div className="flex md:hidden flex-col gap-y-2 ">
             <div className="bg-white py-2 px-4 w-40 rounded-3xl gap-4 flex items-center">
               <span className="font-acrom uppercase font-normal text-xs ">
-              звоните
+                звоните
               </span>
               <Comma className="w-5 h-5" />
             </div>
             <span className="px-3 font-acrom uppercase font-normal text-xs text-white">
-            8 993 266-55-96
+              8 916 675-78-95
             </span>
           </div>
 
           <div className="flex md:hidden flex-col gap-y-2 ">
             <div className="bg-white py-2 px-4 w-40 rounded-3xl gap-4 flex items-center">
               <span className="font-acrom uppercase font-normal text-xs ">
-              пишите
+                пишите
               </span>
               <Comma className="w-5 h-5" />
             </div>
             <span className="px-3 font-acrom uppercase font-normal text-xs text-white">
-            info@osterrig.ru
+              телеграмм
+              <br /> @zhannadotsenko
             </span>
           </div>
 
           {/* блок кнопочек */}
 
-          <div className="md:flex"></div>
-
-          <div className="flex flex-col gap-y-2">
-            <span className="text-white font-acrom uppercase text-sm">
-              Меню
-            </span>
-            <Link
-              href="/categories/chairs"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Главная
-            </Link>
-            <Link
-              href="/categories/tables"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Каталог
-            </Link>
-            <Link
-              href="/categories/sofas"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Заказы
-            </Link>
-            <Link
-              href="/categories/sofas"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Избранное
-            </Link>
-            <Link
-              href="/categories/sofas"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Корзина
-            </Link>
-          </div>
-          <div className="flex flex-col gap-y-2">
-            <span className="text-white font-acrom uppercase text-sm">
-              Информация
-            </span>
-            <Link
-              href="/about"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              О компании
-            </Link>
-            <Link
-              href="/delivery"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Доставка
-            </Link>
-            <Link
-              href="/contacts"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Контакты
-            </Link>
-          </div>
-          <div className="flex flex-col gap-y-2">
-            <span className="text-white font-acrom uppercase text-sm">
-              Для клиентов
-            </span>
-            <Link
-              href="/categories/chairs"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Политика конфиденциальности
-            </Link>
-            <Link
-              href="/categories/tables"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              Доставка и оплата
-            </Link>
-          </div>
-          <div className="flex flex-col gap-y-2">
-            <span className="text-white font-acrom uppercase text-sm">
-              Реквизиты
-            </span>
-            <Link
-              href="/categories/chairs"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              ООО "Лазарь"
-            </Link>
-            <Link
-              href="/categories/tables"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              ИНН: 7727322300
-            </Link>
-            <Link
-              href="/categories/sofas"
-              className="text-white/60 hover:text-white transition-colors text-sm"
-            >
-              ОГРН: 1177746608270
-            </Link>
+          <div className="px-4 col-span-2 grid grid-cols-2 gap-3 md:flex md:gap-6">
+            <div className="flex flex-col gap-y-2">
+              <span className="text-white font-acrom uppercase text-sm">
+                Меню
+              </span>
+              <Link
+                href="/categories/chairs"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Главная
+              </Link>
+              <Link
+                href="/categories/tables"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Каталог
+              </Link>
+              <Link
+                href="/categories/sofas"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Заказы
+              </Link>
+              <Link
+                href="/categories/sofas"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Избранное
+              </Link>
+              <Link
+                href="/categories/sofas"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Корзина
+              </Link>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <span className="text-white font-acrom uppercase text-sm">
+                Информация
+              </span>
+              <Link
+                href="/about"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                О компании
+              </Link>
+              <Link
+                href="/delivery"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Доставка
+              </Link>
+              <Link
+                href="/contacts"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Контакты
+              </Link>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <span className="text-white font-acrom uppercase text-sm">
+                Для клиентов
+              </span>
+              <Link
+                href="/categories/chairs"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Политика конфиденциальности
+              </Link>
+              <Link
+                href="/categories/tables"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Доставка и оплата
+              </Link>
+            </div>
+            <div className="flex flex-col gap-y-2">
+              <span className="text-white font-acrom uppercase text-sm">
+                Реквизиты
+              </span>
+              <Link
+                href="/categories/chairs"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                ИП Доценко Жанна Семёновна
+              </Link>
+              <Link
+                href="/categories/tables"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                ИНН: 504809277960
+              </Link>
+              <Link
+                href="/categories/sofas"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                ОГРНИП: 323508100184664
+              </Link>
+            </div>
           </div>
         </div>
       </div>
