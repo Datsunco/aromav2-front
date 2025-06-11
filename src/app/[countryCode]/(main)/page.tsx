@@ -6,10 +6,11 @@ import FeaturedProducts from "@modules/home/components/featured-products"
 
 import { getRegion } from "@lib/data/regions"
 import { listCollections } from "@lib/data/collections"
-import EventsScroll from "@modules/home/components/event-scroll"
+import EventsScroll, { Event } from "@modules/home/components/event-scroll"
 import AboutSection from "@modules/home/components/about"
 import ReviewCarousel from "@modules/default/reviews"
 import FunctionsList from "@modules/default/functions-list"
+import { listEvents } from "@lib/data/event"
 
 export const metadata: Metadata = {
   title: "Арома Вдохновение",
@@ -29,7 +30,9 @@ export default async function Home(props: {
   //   fields: "id, handle, title",
   // })
 
-  // if (!region) {
+  const data = await listEvents()
+
+  // if (!collections) {
   //   return null
   // }
 
@@ -38,7 +41,7 @@ export default async function Home(props: {
       <Banner />
       <FunctionsList />
       <FeaturesPreview />
-      <EventsScroll />
+      <EventsScroll events={data.collections as Event[]} />
       <div className="mt-40">
         <AboutSection />
       </div>

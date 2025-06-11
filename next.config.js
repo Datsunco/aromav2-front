@@ -21,6 +21,12 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        protocol: "https",
+        hostname: "testaroma.hb.ru-msk.vkcloud-storage.ru",
+        port: "",
+        pathname: "/**",
+      },
+      {
         protocol: "http",
         hostname: "localhost",
       },

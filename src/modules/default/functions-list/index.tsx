@@ -19,7 +19,7 @@ const courses = [
   {
     id: 1,
     title: "Узнать потенциал по дате рождения",
-    image: "/images/course1.jpg",
+    image: "/images/creationaromo.png",
     courses: 42,
     color: "bg-orange-800/80",
     link: "/potential",
@@ -27,7 +27,7 @@ const courses = [
   {
     id: 2,
     title: "Энергия твоего имени",
-    image: "/images/course2.jpg",
+    image: "/images/creationaromo.png",
     courses: 36,
     color: "bg-stone-500/80",
     link: "/name-energy",
@@ -35,7 +35,7 @@ const courses = [
   {
     id: 3,
     title: "Прогноз на месяц",
-    image: "/images/course3.jpg",
+    image: "/images/creationaromo.png",
     courses: 55,
     color: "bg-slate-800/80",
     link: "/name-energy",
@@ -43,7 +43,7 @@ const courses = [
   {
     id: 4,
     title: "Подобрать эфирные масла по дате рождения",
-    image: "/images/course4.jpg",
+    image: "/images/creationaromo.png",
     courses: 39,
     color: "bg-fuchsia-500",
     link: "/name-energy",
@@ -51,7 +51,7 @@ const courses = [
   {
     id: 5,
     title: "Энергия твоего города",
-    image: "/images/course5.jpg",
+    image: "/images/creationaromo.png",
     courses: 5,
     color: "bg-gray-700/80",
     link: "/name-energy",
@@ -59,7 +59,7 @@ const courses = [
   {
     id: 6,
     title: "Получить аффирмацию на день",
-    image: "/images/course6.jpg",
+    image: "/images/creationaromo.png",
     courses: 27,
     color: "bg-sky-500/80",
     link: "/name-energy",
@@ -67,7 +67,7 @@ const courses = [
   {
     id: 7,
     title: "Профориентация по дате рождения",
-    image: "/images/course7.jpg",
+    image: "/images/creationaromo.png",
     courses: 48,
     color: "bg-emerald-800/80",
     link: "/name-energy",
@@ -75,7 +75,7 @@ const courses = [
   {
     id: 8,
     title: "Узнать потенциал по дате рождения",
-    image: "/images/course1.jpg",
+    image: "/images/creationaromo.png",
     courses: 42,
     color: "bg-orange-800/80",
     link: "/name-energy",
@@ -83,7 +83,7 @@ const courses = [
   {
     id: 9,
     title: "Энергия твоего имени",
-    image: "/images/course2.jpg",
+    image: "/images/creationaromo.png",
     courses: 36,
     color: "bg-stone-500/80",
     link: "/name-energy",
@@ -91,7 +91,7 @@ const courses = [
   {
     id: 10,
     title: "Прогноз на месяц",
-    image: "/images/course3.jpg",
+    image: "/images/creationaromo.png",
     courses: 55,
     color: "bg-slate-800/80",
     link: "/name-energy",
@@ -99,7 +99,7 @@ const courses = [
   {
     id: 11,
     title: "Подобрать эфирные масла по дате рождения",
-    image: "/images/course4.jpg",
+    image: "/images/creationaromo.png",
     courses: 39,
     color: "bg-fuchsia-500",
     link: "/name-energy",
@@ -107,7 +107,7 @@ const courses = [
   {
     id: 12,
     title: "Энергия твоего города",
-    image: "/images/course5.jpg",
+    image: "/images/creationaromo.png",
     courses: 5,
     color: "bg-gray-700/80",
     link: "/name-energy",
@@ -115,7 +115,7 @@ const courses = [
   {
     id: 13,
     title: "Получить аффирмацию на день",
-    image: "/images/course6.jpg",
+    image: "/images/creationaromo.png",
     courses: 27,
     color: "bg-sky-500/80",
     link: "/name-energy",
@@ -123,7 +123,7 @@ const courses = [
   {
     id: 14,
     title: "Профориентация по дате рождения",
-    image: "/images/course7.jpg",
+    image: "/images/creationaromo.png",
     courses: 48,
     color: "bg-emerald-800/80",
     link: "/name-energy",
