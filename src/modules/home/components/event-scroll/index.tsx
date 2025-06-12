@@ -13,23 +13,14 @@ import {
 import Link from "next/link"
 import { type CarouselApi } from "components/carousel"
 import { clx } from "@medusajs/ui"
-
-export interface Event {
-  id: string
-  title: string
-  description: string
-  location: string
-  start_date: string
-  is_published: boolean
-  image_urls: {
-    urls: string[]
-  }
-}
+import { Event } from "types/event"
 
 const data: Event[] = [
   {
     id: "TEST",
     title: "Нейростатус",
+    link: "https://example.com",
+    subtitle: "Подзаголовок",
     description: "Ntcn",
     location: "Офис",
     start_date: "2025-12-06T16:00:00.000Z",
@@ -44,6 +35,8 @@ const data: Event[] = [
     id: "TEST",
     title: "Нейростатус",
     description: "Ntcn",
+    link: "https://example.com",
+    subtitle: "Подзаголовок",
     location: "Офис",
     start_date: "2025-12-06T16:00:00.000Z",
     is_published: true,
@@ -57,6 +50,8 @@ const data: Event[] = [
     id: "TEST",
     title: "Нейростатус",
     description: "Ntcn",
+    link: "https://example.com",
+    subtitle: "Подзаголовок",
     location: "Офис",
     start_date: "2025-12-06T16:00:00.000Z",
     is_published: true,
@@ -70,6 +65,8 @@ const data: Event[] = [
     id: "TEST",
     title: "Нейростатус",
     description: "Ntcn",
+    link: "https://example.com",
+    subtitle: "Подзаголовок",
     location: "Офис",
     start_date: "2025-12-06T16:00:00.000Z",
     is_published: true,
@@ -79,26 +76,6 @@ const data: Event[] = [
       ],
     },
   },
-  {
-    id: "TEST",
-    title: "Нейростатус",
-    description: "Ntcn",
-    location: "Офис",
-    start_date: "2025-12-06T16:00:00.000Z",
-    is_published: true,
-    image_urls: {
-      urls: [
-        "https://testaroma.hb.ru-msk.vkcloud-storage.ru/photo_2025-05-30_23-35-55.jpg",
-      ],
-    },
-  },
-  // {
-  //   img: "url(/images/creationaromo.png)",
-  //   title: "Нейростатус",
-  //   subtitle: "Описание мастер-класса по аромочетотам",
-  //   date: "",
-  //   link: "",
-  // },
 ]
 
 const EventsScroll = ({ events }: { events: Event[] | null }) => {
@@ -169,7 +146,7 @@ const EventsScroll = ({ events }: { events: Event[] | null }) => {
                             {item.title}
                           </span>
                           <span className="text-lg text-white drop-shadow-md">
-                            {item.description}
+                            {item.subtitle}
                           </span>
                         </div>
                         <button className="bg-[#B4C3D2] hover:outline outline-1 px-4 py-3 text-base text-white uppercase font-literature font-semibold rounded-3xl group-hover:shadow-md ">

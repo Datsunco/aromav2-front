@@ -3,7 +3,7 @@
 import { sdk } from "@lib/config"
 import { HttpTypes } from "@medusajs/types"
 import { getCacheOptions } from "./cookies"
-import { Event } from "@modules/home/components/event-scroll"
+import { Event } from "types/event"
 
 export const listEvents = async (): Promise<{
   collections: Event[]

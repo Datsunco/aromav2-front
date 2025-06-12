@@ -1,11 +1,12 @@
 import { getEventById } from "@lib/data/event"
-import { Event } from "@modules/home/components/event-scroll"
+import { Event } from "types/event"
 import { Metadata } from "next"
 import Header from "@modules/default/header"
 
 // import { notFound } from "next/navigation"
 import { ArrowLeft, Calendar, MapPin, Clock } from "lucide-react"
 import { format } from "date-fns"
+import { ru } from "date-fns/locale"
 import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
@@ -42,7 +43,7 @@ export default async function EventPage(props: Props) {
   const params = await props.params
   const { id } = params
 
-  let event
+  let event: Event | null
   try {
     event = await getEventById(id)
     console.error(event)
@@ -79,7 +80,7 @@ export default async function EventPage(props: Props) {
         </div>
       </div> */}
 
-      <div className="max-w-6xl mx-auto px-4 py-2">
+      <div className="max-w-6xl md:mx-auto px-1 md:px-4 py-2">
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           {/* Главное изображение */}
           {event && (
@@ -92,16 +93,23 @@ export default async function EventPage(props: Props) {
                 priority
               />
               <div className="absolute inset-0 bg-black bg-opacity-30" />
-              <div className="absolute bottom-6 left-6 text-white">
-                <h1 className="text-4xl md:text-5xl font-bold font-acrom mb-2 drop-shadow-lg">
+
+              <div className="absolute bottom-36 md:bottom-52 left-8 md:left-14 text-white">
+                <h1 className="text-4xl md:text-5xl font-bold font-acrom mb-2 drop-shadow-lg max-w-[600px]">
                   {event.title}
+                  {/* Посиделки с пивом деовчками и рыбкой */}
                 </h1>
-                {isUpcoming && (
-                  <div className="inline-flex items-center bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    Предстоящее мероприятие
-                  </div>
-                )}
+                <h1 className="text-xl md:text-2xl font-acrom mb-2 drop-shadow-lg max-w-[600px]">
+                  {event.location},{" "}
+                  {format(eventDate, "d MMMM ", { locale: ru })}
+                  {/* Посиделки с пивом деовчками и рыбкой */}
+                </h1>
+              </div>
+
+              <div className="absolute bottom-6 md:bottom-12  left-8 md:left-14  text-white">
+                <button className="w-full bg-[#B4C3D2] hover:bg-[#9BB0C4] text-white font-semibold py-3 px-6 rounded-full transition-colors duration-300">
+                  Записаться на мероприятие
+                </button>
               </div>
             </div>
           )}
@@ -114,7 +122,7 @@ export default async function EventPage(props: Props) {
                   <div className="flex items-center text-gray-600">
                     <Calendar className="w-5 h-5 mr-2 text-[#B4C3D2]" />
                     <span className="font-medium">
-                      {format(eventDate, "d MMMM yyyy")}
+                      {format(eventDate, "d MMMM yyyy", { locale: ru })}
                     </span>
                   </div>
                   <div className="flex items-center text-gray-600">
@@ -155,7 +163,7 @@ export default async function EventPage(props: Props) {
                       Дата
                     </span>
                     <p className="text-lg font-semibold text-gray-900">
-                      {format(eventDate, "d MMMM yyyy")}
+                      {format(eventDate, "d MMMM yyyy", { locale: ru })}
                     </p>
                   </div>
 
