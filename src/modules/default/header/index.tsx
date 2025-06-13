@@ -136,10 +136,10 @@ const Header = () => {
                     <ChevronDown className="-rotate-90" />
                   </LocalizedClientLink>
                   <LocalizedClientLink
-                    href="/about-us"
+                    href="/events"
                     className="whitespace-nowrap rounded-full bg-[#EBEBEB] text-black text-base flex items-center gap-1 min-w-36 font-medium justify-center"
                   >
-                    <span>Записаться</span>
+                    <span>Мероприятия</span>
                     <ChevronDown className="-rotate-90" />
                   </LocalizedClientLink>
                   <LocalizedClientLink

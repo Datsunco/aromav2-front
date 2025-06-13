@@ -14,14 +14,20 @@ import Comma from "icons/comma"
 import { DesktopCatalog } from "../desktop-catalog"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import { sections } from "@modules/default/banner/data"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ListIcon from "icons/list"
 import X from "@modules/common/icons/x"
 import ChevronDown from "@modules/common/icons/chevron-down"
+import { Banner as BannerType } from "types/banner"
+import Link from "next/link"
 
-const Banner = () => {
+const Banner = ({ banner }: { banner: BannerType | null }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [mobileIsOpen, setMobileIsopen] = useState(false)
+
+  useEffect(() => {
+    console.log(banner)
+  }, [banner])
 
   return (
     <div className="relative h-[600px] lg:h-[700px] mx-1 mt-1 bg-blue-600 bg-opacity-20 rounded-[30px] ">
@@ -59,16 +65,18 @@ const Banner = () => {
                 <div className="bg-white h-full flex flex-col overflow-y-auto">
                   <div className="h-14 bg-[#d9ff79] py-2 flex justify-between items-center px-6  z-30">
                     <span className="text-base md:text-2xl font-medium font-acrom">
-                      Тут будет какой-то рекламный текст
+                      {banner?.content ?? ""}
                     </span>
-                    <Button
-                      variant="secondary"
-                      className="px-4 py-2 rounded-lg"
-                    >
-                      <p className="text-sm font-acrom font-medium outline-none border-none shadow-none">
-                        Смотреть
-                      </p>
-                    </Button>
+                    <Link href={banner?.link ?? ""}>
+                      <Button
+                        variant="secondary"
+                        className="px-4 py-2 rounded-lg"
+                      >
+                        <p className="text-sm font-acrom font-medium outline-none border-none shadow-none">
+                          Смотреть
+                        </p>
+                      </Button>
+                    </Link>
                   </div>
                   {/* Modal Header - Mimics the main header */}
                   <div className="mt-[5px] bg-white pl-1 pr-5 flex items-center justify-between border-b">
@@ -104,10 +112,10 @@ const Banner = () => {
                         <ChevronDown className="-rotate-90" />
                       </LocalizedClientLink>
                       <LocalizedClientLink
-                        href="/about-us"
+                        href="/events"
                         className="whitespace-nowrap rounded-full bg-[#EBEBEB] text-black text-base flex items-center gap-1 min-w-36 font-medium justify-center"
                       >
-                        <span>Записаться</span>
+                        <span>Мероприятия</span>
                         <ChevronDown className="-rotate-90" />
                       </LocalizedClientLink>
                       <LocalizedClientLink

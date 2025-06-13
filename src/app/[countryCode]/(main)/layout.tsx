@@ -11,6 +11,7 @@ import FreeShippingPriceNudge from "@modules/shipping/components/free-shipping-p
 import { getBaseURL } from "@lib/util/env"
 import { retrieveCustomer } from "@lib/data/customer"
 import { listCartOptions, retrieveCart } from "@lib/data/cart"
+import { getBannerData } from "@lib/data/banner"
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
@@ -27,10 +28,12 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
     shippingOptions = shipping_options
   }
 
+  const banner = await getBannerData()
+
   return (
     <>
       <Nav />
-      <Promo />
+      <Promo banner={banner} />
       {customer && cart && (
         <CartMismatchBanner customer={customer} cart={cart} />
       )}

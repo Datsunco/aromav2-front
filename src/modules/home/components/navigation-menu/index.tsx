@@ -59,7 +59,7 @@ export function NavigationMenuDemo({ className }: { className: string }) {
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-acrom font-normal">
-            Расписание
+            <Link href={"/events"}>Расписание</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-white">
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">

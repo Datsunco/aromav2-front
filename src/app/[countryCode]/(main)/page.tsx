@@ -12,6 +12,7 @@ import AboutSection from "@modules/home/components/about"
 import ReviewCarousel from "@modules/default/reviews"
 import FunctionsList from "@modules/default/functions-list"
 import { listEvents } from "@lib/data/event"
+import { getBannerData } from "@lib/data/banner"
 
 export const metadata: Metadata = {
   title: "Арома Вдохновение",
@@ -32,14 +33,11 @@ export default async function Home(props: {
   // })
 
   const data = await listEvents()
-
-  // if (!collections) {
-  //   return null
-  // }
+  const banner = await getBannerData()
 
   return (
     <>
-      <Banner />
+      <Banner banner={banner} />
       <FunctionsList />
       <FeaturesPreview />
       <div className="mt-40">

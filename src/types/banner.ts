@@ -1,3 +1,9 @@
+export interface Banner {
+  id: string
+  content: string | null
+  link: string | null
+}
+
 export type SectionTitle =
   | "Ароматерапия"
   | "Девичники"
