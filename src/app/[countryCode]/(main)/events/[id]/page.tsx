@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import Header from "@modules/default/header"
 
 // import { notFound } from "next/navigation"
-import { ArrowLeft, Calendar, MapPin, Clock } from "lucide-react"
+import { Calendar, MapPin, Clock } from "lucide-react"
 import { format } from "date-fns"
 import { ru } from "date-fns/locale"
 import Link from "next/link"

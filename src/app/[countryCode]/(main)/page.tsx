@@ -42,7 +42,9 @@ export default async function Home(props: {
       <Banner />
       <FunctionsList />
       <FeaturesPreview />
-      <EventsScroll events={data.collections as Event[]} />
+      <div className="mt-40">
+        <EventsScroll events={data.collections as Event[]} />
+      </div>
       <div className="mt-40">
         <AboutSection />
       </div>

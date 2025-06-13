@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useCallback } from "react"
 import Autoplay from "embla-carousel-autoplay"
 
 import {
@@ -14,6 +14,7 @@ import Link from "next/link"
 import { type CarouselApi } from "components/carousel"
 import { clx } from "@medusajs/ui"
 import { Event } from "types/event"
+import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 
 const data: Event[] = [
   {
@@ -96,20 +97,26 @@ const EventsScroll = ({ events }: { events: Event[] | null }) => {
     })
   }, [api])
 
-  React.useEffect(() => {
-    console.log(events)
-  }, [events])
+  const scrollPrev = useCallback(() => {
+    api?.scrollPrev()
+  }, [api])
+
+  const scrollNext = useCallback(() => {
+    api?.scrollNext()
+  }, [api])
 
   return (
-    <div className="max-w-5xl mx-auto mt-40">
-      <h1 className="text-5xl font-medium font-acrom max-w-xl mb-10 text-center mx-auto">
-        <span className="font-literature text-4xl font-bold">Мероприятия</span>{" "}
+    <div className="max-w-5xl mx-auto">
+      <h1 className="text-3xl md:text-5xl font-medium font-acrom max-w-xl mb-5 md:mb-10 text-center mx-auto">
+        <span className="font-literature text-2xl md:text-4xl font-bold">
+          Мероприятия
+        </span>{" "}
         <br></br> и анонсы событий
       </h1>
       <Carousel
         plugins={[
           Autoplay({
-            delay: 3000,
+            delay: 9000,
           }),
         ]}
         setApi={setApi}
@@ -124,12 +131,12 @@ const EventsScroll = ({ events }: { events: Event[] | null }) => {
             ? events.map((item, index) => (
                 <CarouselItem
                   key={index}
-                  className={clx("pl-1  md:basis-1/2 lg:basis-5/6")}
+                  className={clx("pl-1 basis-1 sm:basis-2/3 lg:basis-5/6")}
                 >
                   <Link href={`/events/${item.id}`}>
                     <div
                       className={clx(
-                        "rounded-3xl  flex items-center bg-contain justify-center p-6 aspect-[20/9]",
+                        "rounded-3xl  flex items-center bg-contain justify-center p-6 aspect-square sm:aspect-[20/9] ",
                         "cursor-pointer transition-all duration-200 hover:scale-[101%] hover:shadow-md"
                       )}
                       style={{
@@ -140,7 +147,7 @@ const EventsScroll = ({ events }: { events: Event[] | null }) => {
                           ")",
                       }}
                     >
-                      <div className="w-full mt-auto mb-4 mx-10 flex justify-between items-end">
+                      <div className="w-full mt-auto mb-4 sm:mx-10 flex flex-col sm:flex-row sm:justify-between sm:items-end">
                         <div className="flex flex-col">
                           <span className="font-acrom text-3xl font-semibold text-white drop-shadow-lg group-hover:underline transition-all duration-300">
                             {item.title}
@@ -160,7 +167,7 @@ const EventsScroll = ({ events }: { events: Event[] | null }) => {
             : data.map((item, index) => (
                 <CarouselItem
                   key={index}
-                  className={clx("pl-1  md:basis-1/2 lg:basis-5/6")}
+                  className={clx("pl-1 basis-2/4 md:basis-1/2 lg:basis-5/6")}
                 >
                   <div
                     className={clx(
@@ -189,8 +196,60 @@ const EventsScroll = ({ events }: { events: Event[] | null }) => {
                 </CarouselItem>
               ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden md:block w-10 h-10 absolute  -left-5" />
-        <CarouselNext className="hidden md:block w-10 h-10 absolute -right-5" />
+        <button
+          onClick={scrollPrev}
+          className="hidden md:block w-12 h-12 absolute pl-1 -left-2 top-1/2  -translate-x-1/2 group mx-2 p-2 rounded-full bg-black hover:scale-105 transition-all"
+        >
+          <ChevronLeftIcon className="w-full h-full text-white" />
+        </button>
+        <button
+          onClick={scrollNext}
+          className="hidden md:block w-12 h-12 absolute pr-1 -right-12 top-1/2  -translate-x-1/2 group mx-2 p-2 rounded-full bg-black hover:scale-105 transition-all"
+        >
+          <ChevronRightIcon className="w-full h-full text-white" />
+        </button>
+        <div className="flex md:hidden justify-center gap-4 mt-2 md:mt-8">
+          <div className="bg-gray-200 rounded-full py-2">
+            <button
+              onClick={scrollPrev}
+              className="group static transform-none mx-2 p-2 rounded-full bg-white hover:bg-black transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:text-white"
+              >
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button
+              onClick={scrollNext}
+              className="group static transform-none mx-2 p-2 rounded-full bg-white hover:bg-black transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:text-white"
+              >
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        </div>
       </Carousel>
     </div>
   )
