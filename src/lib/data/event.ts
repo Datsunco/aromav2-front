@@ -15,8 +15,8 @@ export const listEvents = async (): Promise<{
 
   return sdk.client
     .fetch<{ events: Event[]; count: number }>("/store/event", {
-      next,
-      cache: "force-cache",
+      next: { revalidate: 60 },
+      //   cache: "force-cache",
     })
     .then(({ events }) => ({ collections: events, count: events.length }))
 }
@@ -30,8 +30,8 @@ export const getEventById = async (id: string): Promise<Event | null> => {
     return sdk.client
       .fetch<{ event: Event }>(`/store/event`, {
         query: { id },
-        next,
-        cache: "force-cache",
+        next: { revalidate: 60 },
+        // cache: "force-cache",
       })
       .then(({ event }) => event)
   } catch (error) {
