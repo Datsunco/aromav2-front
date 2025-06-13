@@ -12,8 +12,8 @@ export const getBannerData = async (): Promise<Banner> => {
   }
 
   return sdk.client.fetch<Banner>("/store/banner", {
-    next,
-    cache: "force-cache",
+    next: { revalidate: 60 },
+    // cache: "force-cache",
   })
   // .then(({ banner }) => banner)
 }
