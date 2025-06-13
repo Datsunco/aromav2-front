@@ -28,12 +28,12 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
     shippingOptions = shipping_options
   }
 
-  const banner = await getBannerData()
+  // const banner = await getBannerData()
 
   return (
     <>
       <Nav />
-      <Promo banner={banner} />
+      <Promo />
       {customer && cart && (
         <CartMismatchBanner customer={customer} cart={cart} />
       )}
