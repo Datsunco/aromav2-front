@@ -134,13 +134,13 @@ const imageCollapsibleData = [
       "Прикоснитесь к таинству создания духов и почувствуйте себя настоящим парфюмером, экспериментируя с ароматами.",
   },
   {
-    img: "/images/event/individual-parfume/1.jpg",
+    img: "/images/women-meets/parfume/girls2.jpg",
     title: "Натуральные компоненты",
     description:
       "Мы используем только натуральные эфирные масла высшего качества, чтобы ваши духи были не только ароматными, но и полезными.",
   },
   {
-    img: "/images/event/individual-parfume/aroma-process.jpg",
+    img: "/images/women-meets/parfume/process.jpg",
     title: "Творческий процесс",
     description:
       "Создайте аромат, который будет отражать вашу индивидуальность - свежий, цветочный, древесный или ориентальный.",
@@ -176,7 +176,7 @@ export default function IndividualPerfumeTemplate() {
       <section className="max-w-6xl mx-auto flex flex-col mt-8">
         <div className="px-2 lg:px-0">
           <Banner
-            img="/images/perfume-workshop.jpg"
+            img="/images/women-meets/parfume/box.jpg"
             title={"Создание индивидуального парфюма"}
             bgColor="#F0E8FF"
             features={bannerFeatures}
@@ -193,8 +193,10 @@ export default function IndividualPerfumeTemplate() {
 
         <InfoBlock
           imgSrc={[
-            "/images/event/individual-parfume/aroma-dress.jpg",
-            "/images/event/individual-parfume/aroma-dress.jpg",
+            "/images/women-meets/parfume/girls2.jpg",
+            "/images/women-meets/parfume/process.jpg",
+            "/images/women-meets/parfume/girls3.jpg",
+            "/images/women-meets/parfume/table2.jpg",
           ]}
         >
           <>

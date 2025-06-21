@@ -1,11 +1,53 @@
 "use client"
 import Header from "@modules/default/header"
 import Banner from "@modules/default/service-banner"
-import ReviewCarousel from "@modules/default/reviews"
+import ReviewCarousel, { Testimonial } from "@modules/default/reviews"
 import MultiAccordion from "@modules/default/service-program"
 import InfoBlock from "@modules/default/info-first-block"
 import ImageCollapsible from "@modules/default/image-collapsible"
 import FactsBlock from "@modules/default/facts-block"
+
+const myTestimonials: Testimonial[] = [
+  {
+    id: 1,
+    name: "Клиент",
+    role: "",
+    text: `Для меня встреча по женским архетипам была очень информативна. Даже более того, она оказала на меня влияние в обход сознания - достучалась до Души. Это интересно как информация в совокупности с работой масел глубже проникает внутрь. Это выглядит как волшебство.
+Я мысленно проводила архетипы через свою жизнь - как я действовала в разных ситуациях, какая женщина во мне "говорила". В некоторые моменты подступали слезы - настолько проникновенно это было.
+Считаю, что данный мастер-класс будет полезен всем женщинам, которые хотят лучше себя узнать и гармонично проявляться в этом мире.
+Жанна, благодарю!❤️`,
+    image: "/images/women-meets/archytype/girls.jpg",
+  },
+  {
+    id: 2,
+    name: "Клиент",
+    role: "",
+    text: "Мне очень понравилась как прошла встреча. Это прекрасная возможность получше узнать себя, отключить мозг, почувствовать и увидеть всю правду. Очень интересно, информативно, позитивно. Настраивает на работу с собой, помогает понять как  лучше взаимодействовать с архетипами.",
+    image: "/images/women-meets/archytype/girls.jpg",
+  },
+  {
+    id: 3,
+    name: "Клиент",
+    role: "",
+    text: "Жанна, благодарю за встречу! Время пролетело незаметно, но при этом очень продуктивно! Было тепло и хорошо. Много новых знаний и понимания пришло. Ушла наполненной, безмерно этому счастлива❤️",
+    image: "/images/women-meets/archytype/girls.jpg",
+  },
+  {
+    id: 4,
+    name: "Клиент",
+    role: "",
+    text: "Жанна, благодарю за встречу! Время пролетело незаметно, но при этом очень продуктивно! Было тепло и хорошо. Много новых знаний и понимания пришло. Ушла наполненной, безмерно этому счастлива❤️",
+    image: "/images/women-meets/archytype/girls.jpg",
+  },
+  {
+    id: 5,
+    name: "Клиент",
+    role: "",
+    text: `Жанна, спасибо за чудесную встречу по Архетипам ❤️. Очень интересно было узнать, кто же у меня сейчас главенствует, кого спрятать подальше, а какому архетипу дать развитие 🤩.  Интригу с расшифровкой ты держала до последнего 🤣.  Любопытно было послушать у кого какие интерпретации, и как они откликаются мне или нет. Теперь очень хочется встретиться через какое-то время и ещё раз провести такую встречу и поделиться результатами. 😊 Жду вечера, чтобы нанести своё аромаплатье 😊❤️`,
+    image: "/images/women-meets/archytype/girls.jpg",
+  },
+  // ... другие отзывы
+]
 
 export const aromaSections = [
   {
@@ -129,19 +171,19 @@ const bannerFeatures = [
 
 const imageCollapsibleData = [
   {
-    img: "/images/photo.png",
+    img: "/images/women-meets/archytype/table.jpg",
     title: "7 женских архетипов",
     description:
       "Исследуем энергии Богини, Феи, Амазонки, Ведьмы, Матери, Гейши и Императрицы через ароматы. Узнайте, какие из них есть в вас и какие хотите развить.",
   },
   {
-    img: "/images/aromotherapy.png",
+    img: "/images/women-meets/archytype/done.jpg",
     title: "Магия ароматов",
     description:
       "Каждый архетип имеет свои запахи-проводники. Через обоняние мы получаем прямой доступ к подсознанию и нужным качествам.",
   },
   {
-    img: "/images/photo.png",
+    img: "/images/women-meets/archytype/girls.jpg",
     title: "Ваше аромаплатье",
     description:
       "Создадим парфюмерную композицию, которая станет вашим инструментом для быстрого входа в нужное состояние.",
@@ -192,7 +234,15 @@ export default function ArchetypesPerfumeTemplate() {
           <ImageCollapsible features={imageCollapsibleData} />
         </div>
 
-        <InfoBlock imgSrc={["/images/wonem-meet.png", "/images/aroma.jpg"]}>
+        <InfoBlock
+          imgSrc={[
+            "/images/women-meets/archytype/mom.jpg",
+            "/images/women-meets/archytype/girls.jpg",
+            "/images/women-meets/archytype/done.jpg",
+            "/images/women-meets/archytype/table.jpg",
+            "/images/women-meets/archytype/girls2.jpg",
+          ]}
+        >
           <>
             <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
               <span className="font-literature text-3xl text-blue-400">
@@ -262,7 +312,11 @@ export default function ArchetypesPerfumeTemplate() {
         </div>
       </section>
 
-      <ReviewCarousel />
+      <ReviewCarousel
+        testimonials={myTestimonials}
+        title="Наши клиенты о нас"
+        autoplayDelay={5000}
+      />
 
       <div className="md:hidden z-50 fixed bottom-0 w-full bg-white rounded-t-3xl h-20 flex justify-center items-center shadow-inner">
         <button className="py-3 w-full mx-7 rounded-xl bg-blue-600 text-white font-acrom font-medium text-lg">
