@@ -9,7 +9,7 @@ import { ServiceCardType } from "types/service"
 const data: ServiceCardType[] = [
   {
     type: "Услуга",
-    title: "Индивидуальный прием ароматерапевта",
+    title: "Индивидуальный прием ароматолога",
     link: "/services/individual-aroma",
     img: "/images/creationaromo.png",
     time: "2 часа",
@@ -17,7 +17,7 @@ const data: ServiceCardType[] = [
   },
   {
     type: "Услуга",
-    title: "Ароматерапевтическое свидание для пары ",
+    title: "Для пары. Гармонизация отношений",
     link: "/services/family-aroma",
     img: "/images/creationaromo.png",
     time: "2 часа",
@@ -25,7 +25,15 @@ const data: ServiceCardType[] = [
   },
   {
     type: "Услуга",
-    title: "Прием ароматерапевта для детей",
+    title: "Аромасеанс Вместе с мамой",
+    link: "/services/mom-aroma",
+    img: "/images/creationaromo.png",
+    time: "2 часа",
+    classname: "bg-[#C7F9D4]",
+  },
+  {
+    type: "Услуга",
+    title: "Прием ароматолога для детей",
     link: "/services/child-aroma",
     img: "/images/creationaromo.png",
     time: "2 часа",
@@ -45,7 +53,7 @@ export default function AromatherapyTemplate({}: {}) {
         {/* Банер */}
         <Banner title="Ароматерапия" img="/images/test.png" />
         <div className="flex min-h-[800px] mt-10 flex-col lg:flex-row px-2">
-          <div className="">Сортировка</div>
+          {/* <div className="">Сортировка</div> */}
           <ServiceList serviceList={data} />
         </div>
       </section>

@@ -20,6 +20,7 @@ import X from "@modules/common/icons/x"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import { Banner as BannerType } from "types/banner"
 import Link from "next/link"
+import Logo from "@modules/default/header/logo"
 
 const Banner = ({ banner }: { banner: BannerType | null }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -34,7 +35,8 @@ const Banner = ({ banner }: { banner: BannerType | null }) => {
       {/* Основной контейнер */}
       <div className="max-w-5xl flex flex-col mx-auto ">
         <header className="relative flex  duration-200  items-center">
-          <Image src="/logo.png" alt="Вдохновение" width={180} height={130} />
+          {/* <Image src="/logo.png" alt="Вдохновение" width={180} height={130} /> */}
+          <Logo className="w-[190px] h-[130px] p-2" />
           <div className="hidden md:flex">
             <DesktopCatalog isOpen={isOpen} setIsOpen={setIsOpen}>
               <Button
@@ -80,13 +82,14 @@ const Banner = ({ banner }: { banner: BannerType | null }) => {
                   </div>
                   {/* Modal Header - Mimics the main header */}
                   <div className="mt-[5px] bg-white pl-1 pr-5 flex items-center justify-between border-b">
-                    <Image
+                    {/* <Image
                       src="/logo.png"
                       className=""
                       alt="Вдохновение"
                       width={180}
                       height={130}
-                    />
+                    /> */}
+                    <Logo className="w-[190px] h-[130px] p-2" />
                     <div className="flex items-center gap-4">
                       <X
                         className="w-7 h-7"
@@ -148,8 +151,9 @@ const Banner = ({ banner }: { banner: BannerType | null }) => {
         </header>
         <div className="flex px-4 py-6 lg:py-16  justify-between">
           <div className="max-w-2xl">
-            <h1 className="text-4xl lg:text-5xl font-bold font-acrom text-white mb-10 lg:mb-16 ">
-              <span className="text-blue-600 font-literature">Вдох</span> <br />
+            <h1 className="text-4xl/[42px] lg:text-5xl/[54px] font-bold font-acrom text-white mb-10 lg:mb-16 ">
+              <span className="text-blue-600 font-literature">Вдох ,</span>{" "}
+              <br />
               чтобы выдыхать
               <br />
               <span className="text-blue-600 font-literature">Любовь</span>{" "}

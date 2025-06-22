@@ -26,9 +26,13 @@ export default async function Footer() {
               </span>
               <Comma className="w-5 h-5" />
             </div>
-            <span className="font-acrom uppercase font-normal text-base text-center">
-              г. Мытиши, ул. Веры Волошиной, дом 14, бизнес-центр Разумихин
-            </span>
+            <a
+              href="https://yandex.ru/maps/10740/mytischi/?ll=37.724481%2C55.893263&mode=search&oid=76074700005&ol=biz&sctx=ZAAAAAgBEAAaKAoSCTWzlgLS3EJAEbNhTWVR8ktAEhIJ7upVZHRAQj8RIT6w479AQD8iBgABAgMEBSgKOABA9FNIAWoCcnWdAc3MzD2gAQCoAQC9AUCU2cjCAQblmZ%2BzmwKCAi7QsNGA0L7QvNCwINGB0YLRg9C00LjRjyDQktC00L7RhdC90L7QstC10L3QuNC1igIAkgIAmgIKdG91Y2gtbWFwcw%3D%3D&sll=37.724481%2C55.893263&sspn=0.013518%2C0.012033&text=%D0%B0%D1%80%D0%BE%D0%BC%D0%B0%20%D1%81%D1%82%D1%83%D0%B4%D0%B8%D1%8F%20%D0%92%D0%B4%D0%BE%D1%85%D0%BD%D0%BE%D0%B2%D0%B5%D0%BD%D0%B8%D0%B5&z=15"
+              className="px-3 font-acrom uppercase text-center font-normal text-sm text-black"
+            >
+              г. Мытиши, ул. Веры Волошиной, дом 14, бизнес-центр Разумихин, 3
+              этаж, кабинет 315
+            </a>
           </div>
 
           <div className="w-80 flex flex-col gap-y-2 items-center">
@@ -38,9 +42,12 @@ export default async function Footer() {
               </span>
               <Comma className="w-5 h-5" />
             </div>
-            <span className="font-acrom uppercase font-normal text-base text-center">
+            <a
+              href="tel:+79166757895"
+              className="font-acrom uppercase font-normal text-sm text-center"
+            >
               8 916 675-78-95
-            </span>
+            </a>
           </div>
 
           <div className="w-80 flex flex-col gap-y-2 items-center">
@@ -50,10 +57,13 @@ export default async function Footer() {
               </span>
               <Comma className="w-5 h-5" />
             </div>
-            <span className="font-acrom uppercase font-normal text-base ">
+            <a
+              href="https://t.me/zhannadotsenko"
+              className="font-acrom uppercase font-normal text-sm "
+            >
               телеграмм
               <br /> @zhannadotsenko
-            </span>
+            </a>
           </div>
         </div>
 
@@ -99,9 +109,13 @@ export default async function Footer() {
               </span>
               <Comma className="w-5 h-5" />
             </div>
-            <span className="px-3 font-acrom uppercase font-normal text-xs text-white">
-              г. Мытиши, ул. Веры Волошиной, дом 14, бизнес-центр Разумихин
-            </span>
+            <a
+              href="https://yandex.ru/maps/10740/mytischi/?ll=37.724481%2C55.893263&mode=search&oid=76074700005&ol=biz&sctx=ZAAAAAgBEAAaKAoSCTWzlgLS3EJAEbNhTWVR8ktAEhIJ7upVZHRAQj8RIT6w479AQD8iBgABAgMEBSgKOABA9FNIAWoCcnWdAc3MzD2gAQCoAQC9AUCU2cjCAQblmZ%2BzmwKCAi7QsNGA0L7QvNCwINGB0YLRg9C00LjRjyDQktC00L7RhdC90L7QstC10L3QuNC1igIAkgIAmgIKdG91Y2gtbWFwcw%3D%3D&sll=37.724481%2C55.893263&sspn=0.013518%2C0.012033&text=%D0%B0%D1%80%D0%BE%D0%BC%D0%B0%20%D1%81%D1%82%D1%83%D0%B4%D0%B8%D1%8F%20%D0%92%D0%B4%D0%BE%D1%85%D0%BD%D0%BE%D0%B2%D0%B5%D0%BD%D0%B8%D0%B5&z=15"
+              className="px-3 font-acrom uppercase font-normal text-xs text-white"
+            >
+              г. Мытиши, ул. Веры Волошиной, дом 14, бизнес-центр Разумихин, 3
+              этаж, кабинет 315
+            </a>
           </div>
 
           <div className="flex md:hidden flex-col gap-y-2 ">
@@ -111,9 +125,12 @@ export default async function Footer() {
               </span>
               <Comma className="w-5 h-5" />
             </div>
-            <span className="px-3 font-acrom uppercase font-normal text-xs text-white">
+            <a
+              href="tel:+79166757895"
+              className="px-3 font-acrom uppercase font-normal text-xs text-white"
+            >
               8 916 675-78-95
-            </span>
+            </a>
           </div>
 
           <div className="flex md:hidden flex-col gap-y-2 ">
@@ -123,10 +140,13 @@ export default async function Footer() {
               </span>
               <Comma className="w-5 h-5" />
             </div>
-            <span className="px-3 font-acrom uppercase font-normal text-xs text-white">
+            <a
+              href="https://t.me/zhannadotsenko"
+              className="px-3 font-acrom uppercase font-normal text-xs text-white"
+            >
               телеграмм
               <br /> @zhannadotsenko
-            </span>
+            </a>
           </div>
 
           {/* блок кнопочек */}

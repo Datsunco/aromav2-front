@@ -70,7 +70,7 @@ export default function GirlsTemplate({}: {}) {
         {/* Банер */}
         <Banner img="/images/wonem-meet.png" title={"Девичники"} />
         <div className="flex min-h-[800px] mt-10 flex-col lg:flex-row px-2">
-          <div className="">Сортировка</div>
+          {/* <div className="">Сортировка</div> */}
           <ServiceList serviceList={data} />
         </div>
       </section>

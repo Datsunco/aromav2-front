@@ -158,17 +158,17 @@ const bannerFeatures = [
 
 const imageCollapsibleData = [
   {
-    img: "/images/photo.png",
+    img: "/images/mom.jpg",
     title: "Погружение в себя через ароматы",
     description: "Ароматы помогают раскрыть истинные желания...",
   },
   {
-    img: "/images/aromotherapy.png",
+    img: "/images/mom.jpg",
     title: "Ресурсное состояние",
     description: "Когда тело получает необходимый ресурс...",
   },
   {
-    img: "/images/photo.png",
+    img: "/images/mom.jpg",
     title: "Ресурсное состояние",
     description: "Когда тело получает необходимый ресурс...",
   },
@@ -203,13 +203,13 @@ export default function IndividualAromaTemplate({}: {}) {
         <div className="px-2 lg:px-0">
           <Banner
             img="/images/wonem-meet.png"
-            title={"Индивидуальный прием ароматерапевта"}
+            title={"Индивидуальный прием ароматолога"}
             bgColor="#E4CFB7"
             features={bannerFeatures}
           />
         </div>
         <div className="mt-40">
-          <InfoBlock imgSrc={["/images/photo.png"]}>
+          <InfoBlock imgSrc={["/images/mom.jpg"]}>
             <>
               <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
                 <span className="font-literature text-3xl text-blue-400">
@@ -235,12 +235,37 @@ export default function IndividualAromaTemplate({}: {}) {
           </h1>
           <ImageCollapsible features={imageCollapsibleData} />
         </div>
+
+        <ResultsSection />
+        <div className="mt-40">
+          <InfoBlock
+            imgSrc={[
+              "/images/mom.jpg",
+              // "/images/aromotherapy/child/girl1.jpg",
+              // "/images/aromotherapy/child/boy.jpg",
+            ]}
+          >
+            <>
+              <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
+                <span className="font-literature text-3xl text-blue-400">
+                  Как проходит сеанс?
+                </span>{" "}
+              </h1>
+              <p className="text-lg/5 font-medium text-gray-600 max-w-xl font-acrom">
+                Сеанс начинается с мягкого знакомства, где я помогаю ребёнку
+                почувствовать себя комфортно. Мама активно участвует в процессе,
+                создавая атмосферу доверия. В игровой форме мы исследуем
+                ароматы, наблюдая за реакцией ребёнка. В завершение создаём
+                индивидуальные ароматы для мамы и ребёнка, которые они забирают
+                с собой.
+              </p>
+            </>
+          </InfoBlock>
+        </div>
       </section>
-      <ResultsSection />
-      <HowItWorksSection />
       <div className="px-4">
         <MultiAccordion
-          title="Из чего состоит прием Ароматерапевта"
+          title="Из чего состоит прием Ароматолога"
           blocks={aromaSections}
           className="mt-40"
         />

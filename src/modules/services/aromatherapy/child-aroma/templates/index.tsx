@@ -31,8 +31,8 @@ export const aromaSections = [
         title: "2. Ароматестирование для ребёнка",
         content: (
           <p>
-            Ребёнок в игровой форме знакомится с различными эфирными маслами,
-            отмечая свои ощущения и предпочтения.
+            Ребёнок знакомится с различными эфирными маслами, отмечая свои
+            ощущения и предпочтения.
           </p>
         ),
       },
@@ -117,7 +117,7 @@ const bannerFeatures = [
 
 const imageCollapsibleData = [
   {
-    img: "/images/aromotherapy/child/girl_photo.jpg",
+    img: "/images/aromotherapy/child/boy3.jpg",
     title: "Ароматерапия для школьников",
     description:
       "Помогает справляться с учебной нагрузкой и повышает концентрацию.",
@@ -129,7 +129,7 @@ const imageCollapsibleData = [
   //     "Дети в увлекательной форме знакомятся с ароматами и выбирают свои.",
   // },
   {
-    img: "/images/aromotherapy/child/girl_photo.jpg",
+    img: "/images/aromotherapy/child/girl&mom.jpg",
     title: "Семейный подход",
     description: "Родители активно участвуют в процессе и помогают ребёнку.",
   },
@@ -163,15 +163,20 @@ export default function ChildrenAromaTherapy() {
       <section className="max-w-6xl mx-auto flex flex-col mt-8">
         <div className="px-2 lg:px-0">
           <Banner
-            img="/images/child-banner.jpg"
-            title={"Сеанс ароматерапии для ребёнка"}
+            img="/images/moms_photo.jpg"
+            title={"Прием ароматолога для детей"}
             bgColor="#E4CFB7"
             features={bannerFeatures}
           />
         </div>
 
         <div className="mt-40">
-          <InfoBlock imgSrc={["/images/aromotherapy/child/girl_photo.jpg"]}>
+          <InfoBlock
+            imgSrc={[
+              "/images/aromotherapy/child/girl1.jpg",
+              "/images/aromotherapy/child/boy.jpg",
+            ]}
+          >
             <>
               <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
                 <span className="font-literature text-3xl text-blue-400">
@@ -201,10 +206,35 @@ export default function ChildrenAromaTherapy() {
           </h1>
           <ImageCollapsible features={imageCollapsibleData} />
         </div>
-      </section>
 
-      <ResultsSection />
-      <HowItWorksSection />
+        <ResultsSection />
+        <div className="mt-40">
+          <InfoBlock
+            imgSrc={[
+              "/images/mom.jpg",
+              "/images/aromotherapy/child/girl1.jpg",
+              "/images/aromotherapy/child/boy.jpg",
+            ]}
+          >
+            <>
+              <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
+                <span className="font-literature text-3xl text-blue-400">
+                  Как проходит сеанс?
+                </span>{" "}
+              </h1>
+              <p className="text-lg/5 font-medium text-gray-600 max-w-xl font-acrom">
+                {"  "}Сеанс ароматерапии начинается с короткого знакомства и
+                обсуждения ваших целей и самочувствия. Затем проводится
+                ароматестирование — вы вдыхаете различные эфирные масла и
+                отмечаете свои ощущения. На основе ваших реакций я подбираю
+                индивидуальные ароматы и составляю персональную программу. В
+                завершение вы получаете рекомендации по использованию масел
+                дома.
+              </p>
+            </>
+          </InfoBlock>
+        </div>
+      </section>
 
       <div className="px-4">
         <MultiAccordion
@@ -231,11 +261,11 @@ export default function ChildrenAromaTherapy() {
         <h2 className="text-4xl font-bold font-acrom mb-8">Стоимость сеанса</h2>
         <div className="bg-[#F5F5F5] rounded-2xl p-8 flex flex-col gap-4 max-w-2xl">
           <h3 className="text-2xl font-semibold font-acrom">
-            Сеанс ароматерапии для ребёнка
+            Прием ароматолога для детей
           </h3>
           <p className="text-gray-700 font-acrom">
-            Ароматестирование, составление индивидуальной программы и обучение
-            родителей.
+            Ароматестирование, анализ состояния вашего ребёнка, индивидуальная
+            программа ароматерапевтических формул.
           </p>
           <div className="text-xl font-bold text-blue-600">
             Стоимость: 5000 ₽

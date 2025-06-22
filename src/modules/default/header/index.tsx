@@ -11,6 +11,8 @@ import LocalizedClientLink from "@modules/common/components/localized-client-lin
 import { useState } from "react"
 import ListIcon from "icons/list"
 
+// import LogoIcon from "public/images/icons/logo.svg?react"
+
 import {
   Dialog,
   DialogContent,
@@ -18,6 +20,7 @@ import {
 } from "@modules/layout/components/dialog"
 import X from "@modules/common/icons/x"
 import ChevronDown from "@modules/common/icons/chevron-down"
+import Logo from "./logo"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -46,13 +49,14 @@ const Header = () => {
         className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
         data-testid="nav-store-link"
       >
-        <Image
+        {/* <Image
           src="/logo.png"
           alt="Вдохновение"
           width={180}
           height={130}
           className="h-[102px] w-[140px] lg:w-[180px] lg:h-[130px]"
-        />
+        /> */}
+        <Logo className="w-[160px] h-[122px] px-2" />
       </LocalizedClientLink>
 
       <div className="hidden md:flex">
@@ -104,13 +108,14 @@ const Header = () => {
               </div>
               {/* Modal Header - Mimics the main header */}
               <div className="mt-[5px] bg-white pr-5 flex items-center justify-between border-b">
-                <Image
+                {/* <Image
                   src="/logo.png"
                   className=""
                   alt="Вдохновение"
                   width={140}
                   height={102}
-                />
+                /> */}
+                <Logo className="w-[160px] h-[122px] px-2" />
                 <div className="flex items-center gap-4">
                   <X
                     className="w-7 h-7"
@@ -128,13 +133,13 @@ const Header = () => {
                   >
                     <span>Главная</span>
                   </LocalizedClientLink>
-                  <LocalizedClientLink
+                  {/* <LocalizedClientLink
                     href="/about-us"
                     className="whitespace-nowrap rounded-full bg-[#EBEBEB] text-black text-base flex items-center gap-1 min-w-32 font-medium justify-center"
                   >
                     <span>О студии</span>
                     <ChevronDown className="-rotate-90" />
-                  </LocalizedClientLink>
+                  </LocalizedClientLink> */}
                   <LocalizedClientLink
                     href="/events"
                     className="whitespace-nowrap rounded-full bg-[#EBEBEB] text-black text-base flex items-center gap-1 min-w-36 font-medium justify-center"
@@ -156,7 +161,7 @@ const Header = () => {
                     <LocalizedClientLink
                       href={item.link}
                       key={index}
-                      className="flex items-center w-full text-left py-2 text-black hover:text-blue-600"
+                      className="flex items-center font-acrom w-full text-left py-2 text-black hover:text-blue-600"
                     >
                       <span>{item.title}</span>
                     </LocalizedClientLink>

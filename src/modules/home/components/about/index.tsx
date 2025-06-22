@@ -29,7 +29,7 @@ export default function AboutSection() {
           <div className="font-acrom block items-center text-2xl md:text-4xl font-bold max-w-xl md:max-w-2xl ">
             Студия ароматерапии {""}
             <span className="font-literature text-[#2563EB] w-fit">
-              «Вдохновение»
+              «ВДОХновение»
             </span>
             {""} — ваш путь к гармонии и счастью
           </div>
@@ -69,8 +69,7 @@ export default function AboutSection() {
                 <div>
                   <h3 className="text-4xl font-bold">С 2019</h3>
                   <p className="text-gray-600 mt-2">
-                    года помогаем людям жить в гармонии с собой и быть
-                    счастливее
+                    года помогаю людям жить в гармонии с собой и быть счастливее
                   </p>
                 </div>
                 <button
@@ -122,9 +121,9 @@ export default function AboutSection() {
               {expandedCard === "natural" && (
                 <div className="mt-4 pt-4 border-t border-white/20">
                   <p>
-                    Мы используем только натуральные эфирные масла высшего
-                    качества, чтобы обеспечить максимальную эффективность и
-                    безопасность наших продуктов.
+                    Использую только натуральные эфирные масла высшего качества,
+                    чтобы обеспечить максимальную эффективность и безопасность
+                    наших продуктов.
                   </p>
                 </div>
               )}
@@ -138,7 +137,7 @@ export default function AboutSection() {
               Специалист в области ароматерапии
             </h3>
             <p className=" text-[#666666] mt-auto mb-0">
-              Жанна Доценко выпускница и наставник международной Академии
+              Жанна Доценко - выпускница и наставник международной Академии
               ароматерапии Арома-Код Н.Ю.Бобковой.
             </p>
           </div>
