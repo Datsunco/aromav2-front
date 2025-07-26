@@ -1,5 +1,3 @@
-"use client"
-
 import Header from "@modules/default/header"
 import Banner from "@modules/default/service-banner"
 import InfoBlock from "@modules/default/info-first-block"

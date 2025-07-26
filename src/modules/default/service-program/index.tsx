@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from "react"
 import ChevronDown from "@modules/common/icons/chevron-down"
 import { cn } from "@lib/util/cn"
@@ -45,7 +47,10 @@ export default function MultiAccordion({
 
   return (
     <section
-      className={cn("max-w-6xl mx-auto bg-gray-50 p-4 md:p-8 rounded-3xl", className)}
+      className={cn(
+        "max-w-6xl mx-auto bg-gray-50 p-4 md:p-8 rounded-3xl",
+        className
+      )}
     >
       {title && (
         <h2 className=" p-4 text-3xl font-acrom font-semibold mb-8">{title}</h2>

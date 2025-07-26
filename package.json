@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "next dev --turbopack -p 7000",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start -p 7000",
     "lint": "next lint",
     "predeploy": "medusa db:migrate",
@@ -30,6 +31,7 @@
     "lodash": "^4.17.21",
     "lucide-react": "^0.514.0",
     "next": "15.0.3",
+    "next-sitemap": "^4.2.3",
     "pg": "^8.11.3",
     "qs": "^6.12.1",
     "react": "19.0.0-rc-66855b96-20241106",

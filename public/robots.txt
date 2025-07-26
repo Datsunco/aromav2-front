@@ -1,0 +1,47 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /checkout
+Disallow: /cart
+Disallow: /account/
+Disallow: /checkout/*
+Disallow: /account/*
+
+# GPTBot
+User-agent: GPTBot
+Disallow: /
+
+# ChatGPT-User
+User-agent: ChatGPT-User
+Disallow: /
+
+# CCBot
+User-agent: CCBot
+Disallow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Disallow: /
+
+# Claude-Web
+User-agent: Claude-Web
+Disallow: /
+
+# ClaudeBot
+User-agent: ClaudeBot
+Disallow: /
+
+# Host
+Host: http://localhost:7000
+
+# Sitemaps
+Sitemap: http://localhost:7000/sitemap.xml
+Sitemap: http://localhost:7000/sitemap-events.xml
+Sitemap: http://localhost:7000/sitemap-products.xml
+Sitemap: http://localhost:7000/sitemap-categories.xml
