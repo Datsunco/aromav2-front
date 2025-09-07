@@ -19,7 +19,7 @@ const Promo = () => {
   }, [])
 
   return (
-    <div className="sticky top-0 h-14 bg-[#d9ff79] lg:rounded-[40px] lg:mx-1 lg:mt-1 flex justify-between items-center px-6 md:px-20 z-30">
+    <div className="sticky top-1 h-14 bg-[#d9ff79] lg:rounded-[40px]  lg:mt-2 flex justify-between items-center px-6 md:px-20 z-30 md:mx-6">
       <span className="text-base md:text-2xl font-medium font-acrom">
         {banner?.content ?? ""}
       </span>

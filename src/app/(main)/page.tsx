@@ -13,6 +13,7 @@ import ReviewCarousel from "@modules/default/reviews"
 import FunctionsList from "@modules/default/functions-list"
 import { listEvents } from "@lib/data/event"
 import { getBannerData } from "@lib/data/banner"
+import HomeTemplateV2 from "@modules/home/templates"
 
 // export const metadata: Metadata = {
 //   title: "Арома Вдохновение",
@@ -144,7 +145,7 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Banner banner={banner} />
+      {/* <Banner banner={banner} />
       <FeaturesPreview />
       <div className="mt-40">
         <FunctionsList />
@@ -155,7 +156,8 @@ export default async function Home() {
       <div className="mt-40">
         <AboutSection />
       </div>
-      <ReviewCarousel />
+      <ReviewCarousel /> */}
+      <HomeTemplateV2 events={data.collections as Event[]} />
       {/* <div className="py-12">
         <ul className="flex flex-col gap-x-6">
           <FeaturedProducts collections={collections} region={region} />

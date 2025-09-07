@@ -44,6 +44,7 @@ module.exports = {
           80: "#1F2937",
           90: "#111827",
         },
+        "blue-origin": "#E3E7F3",
       },
       backdropFilter: {
         none: "none",
@@ -75,6 +76,7 @@ module.exports = {
       fontFamily: {
         literature: ["var(--font-literature)"],
         acrom: ["var(--font-acrom)"],
+        jost: ["jost", "sans-serif"],
         sans: [
           "Inter",
           "-apple-system",
