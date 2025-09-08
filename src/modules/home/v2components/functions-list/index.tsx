@@ -169,9 +169,16 @@ export default function FunctionsList() {
   return (
     <div className="mx-auto mt-24">
       {/* ✅ Возвращена верстка заголовка */}
-      <div className="text-center mb-4 md:mb-12">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto font-acrom">
+      <div className="mb-4 md:mb-12 text-center">
+        <h2 className="text-3xl font-acrom md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto ">
           Исследуйте свои возможности
+
+
+
+
+
+
+
         </h2>
       </div>
 

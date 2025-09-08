@@ -63,7 +63,9 @@ export default function ReviewCarousel({
     api.on("select", onSelect)
     onSelect()
 
-    return () => api.off("select", onSelect)
+    return () => {
+      api.off("select", onSelect)
+    }
   }, [api])
 
   return (
@@ -74,25 +76,25 @@ export default function ReviewCarousel({
         className="mx-auto w-full"
         opts={{ align: "center", slidesToScroll: 1, loop: true }}
       >
-        <div className="max-w-5xl flex mx-auto">
-          <h1 className="text-5xl font-medium font-acrom max-w-xl mb-10 text-center mx-auto">
+        <div className="mx-auto flex max-w-5xl">
+          <h1 className="mx-auto max-w-xl text-center font-acrom text-5xl font-medium">
             {title}
           </h1>
-          <div className="hidden md:flex relative w-[1px] mr-20 mb-8">
-            <CarouselPrevious className="w-10 h-10 flex" />
-            <CarouselNext className="w-10 h-10 flex" />
+          <div className="relative mb-8 mr-20 hidden w-[1px] md:flex">
+            <CarouselPrevious className="flex h-10 w-10" />
+            <CarouselNext className="flex h-10 w-10" />
           </div>
         </div>
 
-        <CarouselContent className="-ml-2 mr-2 flex items-center pl-1 py-4 min-h-[550px] md:min-h-[530px] lg:min-h-[430px]">
+        <CarouselContent className="-ml-2 mr-2 flex min-h-[550px] items-center py-16 pl-1 md:min-h-[530px] lg:min-h-[430px]">
           {testimonials.map((item, index) => (
             <CarouselItem key={item.id} className="custom-review pl-1">
               <div
                 className={clx(
-                  "relative transition-all duration-500  opacity-70",
+                  "relative opacity-90 transition-all duration-500",
                   index === current
-                    ? "h-[500px] md:h-[480px] lg:h-[380px] scale-105"
-                    : "h-[420px] md:h-[420px] lg:h-[320px] scale-95"
+                    ? "h-[500px] scale-105 md:h-[480px] lg:h-[380px]"
+                    : "h-[420px] scale-95 md:h-[420px] lg:h-[320px]"
                 )}
               >
                 <Image
@@ -100,19 +102,27 @@ export default function ReviewCarousel({
                   alt="lavanda"
                   width={272}
                   height={404}
-                  className="absolute bottom-0 -right-4 w-[200px] h-auto md:w-[272px] z-0 pointer-events-none"
+                  className="pointer-events-none absolute -right-14 -top-20 z-0 h-auto w-[200px] md:-right-14 md:-top-24 md:w-[272px]"
+                />
+
+                <Image
+                  src="/images/home/benefits/lavanda.png"
+                  alt="lavanda"
+                  width={272}
+                  height={404}
+                  className="pointer-events-none absolute -bottom-20 -left-14 z-0 h-auto w-[200px] -rotate-12 -scale-x-100 transform md:-bottom-28 md:-left-28 md:w-[272px]"
                 />
 
                 {/* ✅ ИЗМЕНЕНИЕ ЗДЕСЬ: Заменяем сплошной цвет на градиент для правильной прозрачности */}
                 <div
                   className={clx(
-                    "absolute inset-0 z-10 flex flex-col rounded-[40px] border border-white/20 p-3 text-white shadow-[inset_8px_8px_20px_0_#2437E21A] backdrop-blur-lg cursor-pointer",
+                    "absolute inset-0 z-10 flex cursor-pointer flex-col rounded-[40px] border border-white/20 p-3 text-white shadow-[inset_8px_8px_20px_0_#2437E21A] backdrop-blur-[2px]",
                     // Заменяем `bg-[#E3E7F3]/[43]` на градиент
                     "bg-gradient-to-b from-white/40 to-white/10"
                   )}
                 >
-                  <div className="flex flex-col items-center md:flex-row p-0 h-full py-4 px-4 overflow-hidden">
-                    <div className="w-full mt-auto mx-auto md:mx-10 flex justify-between items-end">
+                  <div className="flex h-full flex-col items-center overflow-hidden p-0 px-4 py-4 md:flex-row">
+                    <div className="mx-auto mt-auto flex w-full items-end justify-between md:mx-10">
                       <div className="flex flex-col overflow-hidden">
                         {/* Твоя верстка текста остается без изменений, но я поменял цвет для читаемости на новом фоне */}
                         <span className="font-acrom text-3xl font-semibold text-[#2E4F6C] drop-shadow-lg transition-all duration-300">

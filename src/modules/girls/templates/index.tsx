@@ -4,6 +4,8 @@ import Banner from "@modules/default/banner"
 import ServiceList from "@modules/default/service"
 
 import { ServiceCardType } from "types/service"
+import GirlsBanner from "../v2components/banner"
+import Types from "../v2components/types"
 
 const data: ServiceCardType[] = [
   {
@@ -59,19 +61,18 @@ const data: ServiceCardType[] = [
 export default function GirlsTemplate({}: {}) {
   return (
     <div className="">
-      <div className="max-w-5xl flex flex-col mx-auto ">
+      <GirlsBanner />
+      <Types />
+      {/* <div className="max-w-5xl flex flex-col mx-auto ">
         <Header />
       </div>
 
-      {/* главная секция */}
       <section className="max-w-6xl mx-auto flex flex-col mt-2 md:mt-8 lg:mt-16">
-        {/* Банер */}
         <Banner img="/images/wonem-meet.png" title={"Девичники"} />
         <div className="flex min-h-[800px] mt-10 flex-col lg:flex-row px-2">
-          {/* <div className="">Сортировка</div> */}
           <ServiceList serviceList={data} />
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

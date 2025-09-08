@@ -77,6 +77,7 @@ module.exports = {
         literature: ["var(--font-literature)"],
         acrom: ["var(--font-acrom)"],
         jost: ["jost", "sans-serif"],
+        kurale: ["kurale", "sans-serif"],
         sans: [
           "Inter",
           "-apple-system",
