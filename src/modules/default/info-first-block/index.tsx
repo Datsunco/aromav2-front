@@ -38,13 +38,15 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ children, imgSrc }) => {
   }, [api, isCarousel])
 
   return (
-    <section className="w-full bg-white">
-      <div className="px-4 mx-auto pb-12 md:pb-24 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
+    <section className="w-full">
+      <div className="mx-auto flex flex-col items-center gap-8 px-8 pb-12 md:flex-row md:items-start md:gap-16 md:pb-12">
         {/* Left column - Text content */}
-        <div className="w-full px-4 md:px-0 md:w-1/3 space-y-6">{children}</div>
+        <div className="my-auto w-full space-y-6 px-4 md:w-1/3 md:px-0">
+          {children}
+        </div>
 
         {/* Right column - Image or Carousel */}
-        <div className="w-full md:w-2/3 h-full">
+        <div className="h-full w-full md:w-2/3">
           {isCarousel ? (
             <Carousel
               setApi={setApi}
@@ -62,7 +64,7 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ children, imgSrc }) => {
               <CarouselContent>
                 {imgSrc.map((src, index) => (
                   <CarouselItem key={index}>
-                    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[400px] rounded-[25px] overflow-hidden">
+                    <div className="relative h-[400px] w-full overflow-hidden rounded-[30px] md:h-[500px] md:rounded-[60px] lg:h-[400px]">
                       <Image
                         src={src}
                         alt={`Slide ${index + 1}`}
@@ -74,13 +76,13 @@ const InfoBlock: React.FC<InfoBlockProps> = ({ children, imgSrc }) => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="flex justify-end gap-4 mt-4">
-                <CarouselPrevious className="w-10 h-10 absolute -left-2" />
-                <CarouselNext className="w-10 h-10 absolute -right-2" />
+              <div className="mt-4 flex justify-end gap-4">
+                <CarouselPrevious className="absolute -left-2 h-10 w-10" />
+                <CarouselNext className="absolute -right-2 h-10 w-10" />
               </div>
             </Carousel>
           ) : (
-            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[400px] rounded-[25px] overflow-hidden">
+            <div className="relative h-[400px] w-full overflow-hidden rounded-[25px] md:h-[500px] lg:h-[400px]">
               <Image
                 src={Array.isArray(imgSrc) ? imgSrc[0] : imgSrc}
                 alt="Content image"

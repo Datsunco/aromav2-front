@@ -1,6 +1,7 @@
-import { Metadata } from "next"
-
+import { listEvents } from "@lib/data/event"
 import NumerologyTemplate from "@modules/numerology/templates"
+import { Metadata } from "next"
+import { Event } from "types/event"
 
 export const dynamic = "force-static"
 
@@ -47,5 +48,6 @@ export const metadata: Metadata = {
 }
 
 export default async function NumerologyPage() {
-  return <NumerologyTemplate />
+  const data = await listEvents()
+  return <NumerologyTemplate events={data.collections as Event[]} />
 }

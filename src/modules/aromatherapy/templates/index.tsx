@@ -4,6 +4,13 @@ import ServiceList from "@modules/default/service"
 
 import { ServiceCardType } from "types/service"
 import AromaBanner from "../v2components/banner"
+import AromaVariants from "../v2components/variants"
+import Benefits from "../v2components/benefits"
+import Appointment from "../v2components/appointment"
+import HowItWorksSection from "../v2components/how-it-works"
+import InfoBlock from "@modules/default/info-first-block"
+import HowItWorks from "../v2components/how-it-works"
+import ReviewCarousel from "@modules/default/reviews"
 
 const data: ServiceCardType[] = [
   {
@@ -44,6 +51,18 @@ export default function AromatherapyTemplate({}: {}) {
   return (
     <div className="">
       <AromaBanner />
+      <AromaVariants />
+      <Benefits />
+      <Appointment />
+      <div className="mt-40">
+        <HowItWorks
+          imgSrc={[
+            "/images/aromotherapy/child/girl1.jpg",
+            "/images/aromotherapy/child/boy.jpg",
+          ]}
+        />
+      </div>
+      <ReviewCarousel />
       {/* <div className="max-w-5xl flex flex-col mx-auto ">
         <Header />
       </div>

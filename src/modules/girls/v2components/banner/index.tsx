@@ -179,10 +179,10 @@ const GirlsBanner = () => {
       </div>
 
       <Image
-        src="/images/aromotherapy/v2/aroma-banner.png"
+        src="/images/girls/banner.png"
         width={160}
         height={160}
-        className="absolute bottom-8 left-1/2 z-10 aspect-square w-[90%] -translate-x-1/2 rotate-[18deg] p-6 opacity-50 blur-[1px] md:bottom-14 md:left-auto md:right-8 md:h-64 md:w-64 md:translate-x-0 md:p-0 md:opacity-100 md:blur-0 xl:bottom-10 xl:right-20 xl:h-[357px] xl:w-[357px]"
+        className="absolute bottom-0 left-1/2 z-10 aspect-[2/3] w-[90%] -translate-x-1/2 p-0 opacity-50 blur-[1px] md:bottom-0 md:left-auto md:right-8 md:h-[300px] md:w-[200px] md:translate-x-0 md:p-0 md:opacity-100 md:blur-0 xl:bottom-0 xl:right-20 xl:h-[486px] xl:w-[324px]"
         alt="banner logo image"
       />
     </section>

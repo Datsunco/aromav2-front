@@ -1,5 +1,7 @@
+import { listEvents } from "@lib/data/event"
 import GirlsTemplate from "@modules/girls/templates"
 import { Metadata } from "next"
+import { Event } from "types/event"
 
 export const dynamic = "force-static"
 
@@ -47,5 +49,6 @@ export const metadata: Metadata = {
 }
 
 export default async function GirlsPage() {
-  return <GirlsTemplate />
+  const data = await listEvents()
+  return <GirlsTemplate events={data.collections as Event[]} />
 }

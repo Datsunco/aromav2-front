@@ -1,6 +1,7 @@
+import { listEvents } from "@lib/data/event"
+import WomanMeetTemplate from "@modules/women-meet/templates"
 import { Metadata } from "next"
-
-import WomenMeetTemplate from "@modules/women-meet/templates"
+import { Event } from "types/event"
 
 export const metadata: Metadata = {
   title: "Женские встречи",
@@ -8,5 +9,6 @@ export const metadata: Metadata = {
 }
 
 export default async function NumerologyPage() {
-  return <WomenMeetTemplate />
+  const data = await listEvents()
+  return <WomanMeetTemplate events={data.collections as Event[]} />
 }

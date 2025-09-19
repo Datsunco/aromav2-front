@@ -1,0 +1,55 @@
+import { listEvents } from "@lib/data/event"
+import GirlBigGirlTemplate from "@modules/big-girl/templates"
+import GirlsTemplate from "@modules/girls/templates"
+import { Metadata } from "next"
+import { Event } from "types/event"
+
+export const dynamic = "force-static"
+
+export const metadata: Metadata = {
+  title:
+    "Ароматические девичники в Мытищах - Создание парфюма и женские практики",
+  description:
+    "✨ Уникальные девичники с ароматами: создание парфюма, архетипы, ресурсные ароматы. 💃 Незабываемые встречи для подруг в Мытищах. Запись: +7 916 675-78-95",
+  keywords: [
+    "девичники Мытищи",
+    "создание парфюма девичник",
+    "ароматические девичники",
+    "женские встречи",
+    "архетипы женщины",
+    "ресурсные ароматы",
+    "девичник с подругами",
+    "необычный девичник",
+    "мастер класс парфюмерия",
+    "женские практики Мытищи",
+  ],
+  openGraph: {
+    title:
+      "Ароматические девичники в Мытищах - Создание парфюма и женские практики",
+    description:
+      "✨ Незабываемые девичники: создание парфюма, женские архетипы, ресурсные ароматы. 💃 Запись: +7 916 675-78-95",
+    type: "website",
+    images: [
+      {
+        url: "/images/girls-events-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ароматические девичники - создание парфюма в кругу подруг",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ароматические девичники в Мытищах",
+    description:
+      "✨ Создание парфюма, женские архетипы, ресурсные ароматы. Незабываемые встречи для подруг!",
+  },
+  alternates: {
+    canonical: "/girls",
+  },
+}
+
+export default async function BigGirlPage() {
+  const data = await listEvents()
+  return <GirlBigGirlTemplate events={data.collections as Event[]} />
+}

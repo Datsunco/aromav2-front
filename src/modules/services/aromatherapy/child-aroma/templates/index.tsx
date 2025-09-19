@@ -7,6 +7,12 @@ import ResultsSection from "../components/result-section"
 import MultiAccordion from "@modules/default/service-program"
 import ImageCollapsible from "@modules/default/image-collapsible"
 import FactsBlock from "@modules/default/facts-block"
+import AromaDateBanner from "../v2components/banner"
+import Info from "../v2components/info"
+import Benefits from "../v2components/benefits"
+import Appointment from "@modules/default/appointment"
+import Prices from "../v2components/prices"
+import AromaBanner from "../v2components/banner"
 
 export const aromaSections = [
   {
@@ -153,152 +159,35 @@ const factsBlockData = [
 export default function ChildrenAromaTherapy() {
   return (
     <div className="">
-      <div className="max-w-5xl flex flex-col mx-auto">
-        <Header />
+      <AromaBanner />
+      <Info />
+      <Benefits />
+      <Appointment />
+      <Prices />
+      <div className="mx-auto mt-20 max-w-5xl md:mt-40">
+        <InfoBlock
+          imgSrc={[
+            "/images/aromotherapy/child/girl_photo.jpg",
+            "/images/aromotherapy/child/boy.jpg",
+          ]}
+        >
+          <>
+            <h1 className="font-jost text-[40px]/10 font-normal tracking-tight text-black">
+              <span className="font-literature text-3xl font-medium text-[#2E4F6C]">
+                Детская ароматерапия
+              </span>{" "}
+              — это мягкая поддержка растущего организма
+            </h1>
+            {/* <p className="max-w-xl font-acrom text-lg/5 font-medium text-gray-600">
+              Ароматерапия помогает детям гармонично развиваться, укрепляет
+              иммунитет и создаёт основу для здоровой взрослой жизни. Особенно
+              важна работа с обонянием — ключевым чувством, которое в
+              современном мире часто остаётся неразвитым.
+            </p> */}
+          </>
+        </InfoBlock>
       </div>
-
-      {/* главная секция */}
-      <section className="max-w-6xl mx-auto flex flex-col mt-8">
-        <div className="px-2 lg:px-0">
-          <Banner
-            img="/images/moms_photo.jpg"
-            title={"Прием ароматолога для детей"}
-            bgColor="#E4CFB7"
-            features={bannerFeatures}
-          />
-        </div>
-
-        <div className="mt-40">
-          <InfoBlock
-            imgSrc={[
-              "/images/aromotherapy/child/girl1.jpg",
-              "/images/aromotherapy/child/boy.jpg",
-            ]}
-          >
-            <>
-              <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
-                <span className="font-literature text-3xl text-blue-400">
-                  Детская ароматерапия
-                </span>{" "}
-                — мягкая поддержка растущего организма
-              </h1>
-              <p className="text-lg/5 font-medium text-gray-600 max-w-xl font-acrom">
-                Ароматерапия помогает детям гармонично развиваться, укрепляет
-                иммунитет и создаёт основу для здоровой взрослой жизни. Особенно
-                важна работа с обонянием — ключевым чувством, которое в
-                современном мире часто остаётся неразвитым.
-              </p>
-            </>
-          </InfoBlock>
-        </div>
-
-        <FactsBlock
-          title="Особенности детской ароматерапии"
-          features={factsBlockData}
-        />
-
-        <div className="mt-20 md:mt-40">
-          <h1 className="font-acrom font-bold mb-10 md:mb-8 text-4xl md:text-5xl md:font-semibold px-6">
-            Ароматерапия помогает детям
-            <br className="sm:hidden" /> в разных ситуациях
-          </h1>
-          <ImageCollapsible features={imageCollapsibleData} />
-        </div>
-
-        <ResultsSection />
-        <div className="mt-40">
-          <InfoBlock
-            imgSrc={[
-              "/images/mom.jpg",
-              "/images/aromotherapy/child/girl1.jpg",
-              "/images/aromotherapy/child/boy.jpg",
-            ]}
-          >
-            <>
-              <h1 className="text-[40px]/10 font-bold font-acrom tracking-tight text-black">
-                <span className="font-literature text-3xl text-blue-400">
-                  Как проходит сеанс?
-                </span>{" "}
-              </h1>
-              <p className="text-lg/5 font-medium text-gray-600 max-w-xl font-acrom">
-                {"  "}Сеанс ароматерапии начинается с короткого знакомства и
-                обсуждения ваших целей и самочувствия. Затем проводится
-                ароматестирование — вы вдыхаете различные эфирные масла и
-                отмечаете свои ощущения. На основе ваших реакций я подбираю
-                индивидуальные ароматы и составляю персональную программу. В
-                завершение вы получаете рекомендации по использованию масел
-                дома.
-              </p>
-            </>
-          </InfoBlock>
-        </div>
-      </section>
-
-      <div className="px-4">
-        <MultiAccordion
-          title="Как проходит детская ароматерапия"
-          blocks={aromaSections}
-          className="mt-40"
-        />
-      </div>
-
       <ReviewCarousel />
-
-      <section className="max-w-6xl mx-auto mt-20 px-4">
-        <h2 className="text-4xl font-bold font-acrom mb-8">
-          Подготовка к сеансу
-        </h2>
-        <p className="text-lg text-gray-700 font-acrom">
-          За день до сеанса желательно избегать сильных ароматов. Ребёнок должен
-          быть отдохнувшим и в хорошем настроении. Родителям рекомендуется
-          подготовить вопросы о состоянии ребёнка и его привычках.
-        </p>
-      </section>
-
-      <section className="max-w-6xl mx-auto mt-20 px-4">
-        <h2 className="text-4xl font-bold font-acrom mb-8">Стоимость сеанса</h2>
-        <div className="bg-[#F5F5F5] rounded-2xl p-8 flex flex-col gap-4 max-w-2xl">
-          <h3 className="text-2xl font-semibold font-acrom">
-            Прием ароматолога для детей
-          </h3>
-          <p className="text-gray-700 font-acrom">
-            Ароматестирование, анализ состояния вашего ребёнка, индивидуальная
-            программа ароматерапевтических формул.
-          </p>
-          <div className="text-xl font-bold text-blue-600">
-            Стоимость: 5000 ₽
-          </div>
-          <button className="py-3 w-full rounded-xl bg-blue-600 text-white font-acrom font-medium text-lg">
-            Записаться
-          </button>
-        </div>
-      </section>
-
-      <section className="max-w-6xl mx-auto mt-20 px-4 pb-20">
-        <h2 className="text-4xl font-bold font-acrom mb-8">
-          Связаться со мной
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          <a
-            href="https://t.me/zhannadotsenkolife"
-            className="py-3 px-6 rounded-xl bg-blue-500 text-white font-acrom font-medium text-lg text-center"
-          >
-            Написать в Telegram
-          </a>
-          <a
-            href="https://wa.me/79000000000"
-            className="py-3 px-6 rounded-xl bg-green-500 text-white font-acrom font-medium text-lg text-center"
-          >
-            Написать в WhatsApp
-          </a>
-        </div>
-      </section>
-
-      <div className="md:hidden z-50 fixed bottom-0 w-full bg-white rounded-t-3xl h-20 flex justify-center items-center shadow-inner">
-        <button className="py-3 w-full mx-7 rounded-xl bg-blue-600 text-white font-acrom font-medium text-lg">
-          Записаться на прием
-        </button>
-      </div>
     </div>
   )
 }
