@@ -128,7 +128,7 @@ export default function ReviewCarousel({
                         <span className="font-acrom text-3xl font-semibold text-[#2E4F6C] drop-shadow-lg transition-all duration-300">
                           {item.name}
                         </span>
-                        <span className="text-lg text-[#191919] drop-shadow-md">
+                        <span className="text-sm text-[#191919] drop-shadow-md md:text-base">
                           {item.text}
                         </span>
                       </div>

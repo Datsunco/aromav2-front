@@ -13,7 +13,7 @@ const Benefits = () => {
         </h2>
         <p className="tex-xs/none mt-4 max-w-[350px] text-center font-jost font-light md:max-w-none md:text-xl/none">
           И пусть плывёт ваш кораблик в нужном
-          <br className="hidden md:flex" /> направлении к новым берегам
+          <br className="hidden md:flex" /> направлении на полных парусах
         </p>
         {/* <img
           src="/images/home/benefits/pip.png"
@@ -30,22 +30,23 @@ const Benefits = () => {
           <article className="z-10 mx-8 flex h-full flex-row gap-6 rounded-[30px] bg-white p-4 shadow-lg md:mx-0 md:max-w-[220px] md:flex-col md:rounded-[33px] md:p-8 md:px-5 md:py-3 md:pb-10 xl:max-w-[300px] xl:py-6">
             <CheckIcon className="min-h-6 min-w-6 md:min-h-9 md:min-w-9" />
             <div className="flex h-full font-jost font-light text-[#2E4F6C] md:text-lg/tight">
-              Приготовление ванны друг для друга как выражение заботы и новый
-              уровень свиданий
+              Приготовление ванны друг для друга как выражение заботы. А может
+              совместный приём ванны как новый уровень свиданий.
             </div>
           </article>
 
           <article className="relative z-10 mx-8 flex h-full flex-row gap-6 rounded-[30px] bg-white p-4 shadow-lg md:mx-0 md:max-w-[220px] md:flex-col md:rounded-[33px] md:p-8 md:px-5 md:py-3 md:pb-10 xl:max-w-[300px] xl:py-6">
             <CheckIcon className="min-h-6 min-w-6 md:min-h-9 md:min-w-9" />
             <div className="flex h-full font-jost font-light text-[#2E4F6C] md:text-lg/tight">
-              Массаж друг для друга с волшебным кремом раскроет новые страстные
-              чувства
+              Массаж друг другу с волшебно пахнущим лёгким кремом, нежные
+              прикосновения откроют новый уровень ощущений
             </div>
           </article>
           <article className="relative z-10 mx-8 flex h-full flex-row gap-6 rounded-[30px] bg-white p-4 shadow-lg md:mx-0 md:max-w-[220px] md:flex-col md:rounded-[33px] md:p-8 md:px-5 md:py-3 md:pb-10 xl:max-w-[300px] xl:py-6">
             <CheckIcon className="min-h-6 min-w-6 md:min-h-9 md:min-w-9" />
             <div className="flex h-full font-jost font-light text-[#2E4F6C] md:text-lg/tight">
-              Прикосновения с легким кремом станут по новому прекрасными
+              Новые совместные действия создадут новые впечатления и сделают вас
+              ближе к друг другу
             </div>
           </article>
         </div>

@@ -21,6 +21,7 @@ import NumerologyTeaSection from "../v2components/tea"
 import MatrixInfo from "../v2components/matrix-info"
 import MatrixBenefits from "../v2components/matrix-benefits"
 import Prices from "../v2components/matrix-prices"
+import Orientation from "../v2components/Orientation"
 
 const data: ServiceCardType[] = [
   {
@@ -91,19 +92,23 @@ export default async function NumerologyTemplate({
       <MatrixBenefits />
       <Prices />
 
-      <div className="mx-4 mt-20 max-w-5xl rounded-[60px] bg-white pt-12 md:mx-auto md:mt-40">
+      <div className="mx-4 mt-20 max-w-5xl rounded-[60px] pt-12 md:mx-auto md:mt-40">
         <InfoBlock
           imgSrc={[
-            "/images/girls/team.jpg",
-            "/images/aromotherapy/child/boy.jpg",
+            "/images/mom.jpg",
+            "/images/numerology/hands.jpg",
+            "/images/aromotherapy/aroma1.jpg",
+            "/images/aromotherapy/aroma4.jpg",
           ]}
         >
           <div className="">
-            <h1 className="font-jost text-[40px]/10 font-normal tracking-tight text-black">
+            <h1 className="font-jost text-[20px]/10 font-normal tracking-tight text-black">
               <span className="font-literature text-3xl font-medium text-[#2E4F6C]">
-                Ароматический сеанс
+                Ароматерапия для пары
               </span>{" "}
-              - ваш путь к энергии и бодрости
+              <br />С помощью услуги Для пары. Гармонизация отношений я помогу
+              вам разрулить ваши проблемы и выйти на новый уровень
+              взаимоотношений.
             </h1>
             {/* <p className="max-w-xl font-acrom text-lg/5 font-medium text-gray-600">
               Ароматерапия помогает детям гармонично развиваться, укрепляет
@@ -114,6 +119,7 @@ export default async function NumerologyTemplate({
           </div>
         </InfoBlock>
       </div>
+      <Orientation />
 
       <ReviewCarousel />
       {/* <div className="max-w-5xl flex flex-col mx-auto ">

@@ -57,8 +57,12 @@ export default function AromatherapyTemplate({}: {}) {
       <div className="mt-40">
         <HowItWorks
           imgSrc={[
-            "/images/aromotherapy/child/girl1.jpg",
-            "/images/aromotherapy/child/boy.jpg",
+            "/images/aromotherapy/code.jpg",
+            "/images/aromotherapy/aroma1.jpg",
+            "/images/aromotherapy/aroma4.jpg",
+            "/images/aromotherapy/aroma2.jpg",
+            "/images/aromotherapy/aroma3.jpg",
+            "/images/aromotherapy/aroma3.jpg",
           ]}
         />
       </div>

@@ -14,11 +14,11 @@ const Benefits = () => {
         </h2>
 
         {/* Левый и правый декор из твоей базы */}
-        <img
+        {/* <img
           src="/images/home/benefits/pip.png"
           alt="пипетка"
           className="absolute left-0 top-60 z-0 h-52 w-32 md:top-20 md:h-64 md:w-40 xl:top-10 xl:h-[469px] xl:w-72"
-        />
+        /> */}
 
         {/* Дополнительные светлые «капсулы» как подложки карточек */}
         {/* <div className="pointer-events-none absolute inset-x-0 top-[220px] mx-auto hidden h-[180px] max-w-4xl rounded-[40px] bg-white/60 shadow-[0_8px_40px_rgba(0,0,0,0.06)] blur-[2px] md:block" /> */}
@@ -28,11 +28,11 @@ const Benefits = () => {
           {/* Карточка 1: Ваши возможности */}
           <article className="relative z-10 mx-8 hidden h-fit w-full flex-col gap-6 rounded-[60px] bg-gradient-to-b from-white/50 to-white/10 p-8 pb-10 shadow-[inset_9px_9px_26.4px_0_#2437E21A] backdrop-blur-[2px] md:mx-0 md:flex md:max-w-[220px] md:rounded-[33px] md:px-5 md:py-3 md:pb-10 xl:max-w-[300px] xl:py-6">
             {/* маленькая иллюстрация карты как на скрине */}
-            <img
+            {/* <img
               src="/images/numerology/card.png"
               alt="Карта Таро"
               className="absolute h-20 w-20 -rotate-[20deg] opacity-90 md:-bottom-10 md:-left-16 md:h-32 md:w-32 xl:-bottom-20 xl:-left-24 xl:h-40 xl:w-40"
-            />
+            /> */}
             <p className="font-jost text-xl/tight font-medium md:text-base">
               Ваши возможности
             </p>
@@ -73,11 +73,11 @@ const Benefits = () => {
             {/* Карточка 3: Отличный подарок */}
             <article className="relative z-10 flex h-fit flex-col gap-6 rounded-[60px] bg-gradient-to-b from-white/50 to-white/10 p-8 pb-10 shadow-[inset_9px_9px_26.4px_0_#2437E21A] backdrop-blur-[2px] md:max-w-[220px] md:rounded-[33px] md:px-5 md:py-3 md:pb-10 xl:max-w-[300px] xl:py-6">
               {/* маленькая медитирующая иконка снизу-справа */}
-              <img
+              {/* <img
                 src="/images/numerology/human.png"
                 alt="Иконка подарка"
                 className="absolute -bottom-2 -right-10 h-10 w-10 opacity-90 md:h-16 md:w-16 xl:-bottom-10 xl:-right-20 xl:h-24 xl:w-24"
-              />
+              /> */}
               <p className="font-jost text-xl/tight font-medium md:text-base">
                 Отличный подарок
               </p>

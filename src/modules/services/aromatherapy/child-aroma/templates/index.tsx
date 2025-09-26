@@ -1,7 +1,7 @@
 import Header from "@modules/default/header"
 import Banner from "@modules/default/service-banner"
 import InfoBlock from "@modules/default/info-first-block"
-import ReviewCarousel from "@modules/default/reviews"
+import ReviewCarousel, { Testimonial } from "@modules/default/reviews"
 import HowItWorksSection from "../components/how-it-works"
 import ResultsSection from "../components/result-section"
 import MultiAccordion from "@modules/default/service-program"
@@ -101,41 +101,30 @@ export const aromaSections = [
   },
 ]
 
-const bannerFeatures = [
+const myTestimonials: Testimonial[] = [
   {
-    title: "Безопасность",
-    description:
-      "Используем только проверенные и разрешённые для детей эфирные масла.",
+    id: 1,
+    name: "Наталья и София",
+    text: `Вы сделали наш день волшебно незабываемым!
+Мы Вас обожаем! София спрашивает - мама, когда мы в следующий раз поедем к тёте Жанне?))
+От всей души благодарю🙏💕 читаю аромаКод моей малышки и плачу! Моя девочка такая маленькая и такая взрослая! (( все точно о ней и о нас с мужем - как мы к ней относимся ( хочется напрочь все изменить! Чтобы у нашей девочки было как можно больше открытых дверей по жизни. 
+Спасибо🙏💕`,
   },
   {
-    title: "Простота применения",
-    description:
-      "Программа разрабатывается с учётом удобства для детей и родителей.",
+    id: 2,
+    name: "Наталья и София",
+    text: `Вы сделали наш день волшебно незабываемым!
+Мы Вас обожаем! София спрашивает - мама, когда мы в следующий раз поедем к тёте Жанне?))
+От всей души благодарю🙏💕 читаю аромаКод моей малышки и плачу! Моя девочка такая маленькая и такая взрослая! (( все точно о ней и о нас с мужем - как мы к ней относимся ( хочется напрочь все изменить! Чтобы у нашей девочки было как можно больше открытых дверей по жизни. 
+Спасибо🙏💕`,
   },
   {
-    title: "Комплексный подход",
-    description:
-      "Работаем не только с ребёнком, но и обучаем родителей для лучшего результата.",
-  },
-]
-
-const imageCollapsibleData = [
-  {
-    img: "/images/aromotherapy/child/boy3.jpg",
-    title: "Ароматерапия для школьников",
-    description:
-      "Помогает справляться с учебной нагрузкой и повышает концентрацию.",
-  },
-  // {
-  //   img: "/images/child-therapy-2.jpg",
-  //   title: "Игровое тестирование",
-  //   description:
-  //     "Дети в увлекательной форме знакомятся с ароматами и выбирают свои.",
-  // },
-  {
-    img: "/images/aromotherapy/child/girl&mom.jpg",
-    title: "Семейный подход",
-    description: "Родители активно участвуют в процессе и помогают ребёнку.",
+    id: 3,
+    name: "Наталья и София",
+    text: `Вы сделали наш день волшебно незабываемым!
+Мы Вас обожаем! София спрашивает - мама, когда мы в следующий раз поедем к тёте Жанне?))
+От всей души благодарю🙏💕 читаю аромаКод моей малышки и плачу! Моя девочка такая маленькая и такая взрослая! (( все точно о ней и о нас с мужем - как мы к ней относимся ( хочется напрочь все изменить! Чтобы у нашей девочки было как можно больше открытых дверей по жизни. 
+Спасибо🙏💕`,
   },
 ]
 
@@ -187,7 +176,7 @@ export default function ChildrenAromaTherapy() {
           </>
         </InfoBlock>
       </div>
-      <ReviewCarousel />
+      <ReviewCarousel testimonials={myTestimonials} />
     </div>
   )
 }

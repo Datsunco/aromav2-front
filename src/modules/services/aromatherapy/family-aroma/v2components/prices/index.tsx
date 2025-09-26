@@ -1,3 +1,4 @@
+import { Button } from "@medusajs/ui"
 import React from "react"
 
 const Prices = () => {
@@ -33,14 +34,16 @@ const Prices = () => {
                 Общий вкусно пахнущий крем для ухода за кожей
               </li>
             </ul>
-            <p className="font-jost text-xl/tight font-medium text-[#2E4F6C] md:text-xl xl:text-[30px]">
-              Стоимость 11000 руб.
-            </p>
-            {/* <p className="-mt-6 font-jost text-sm/tight font-light">
-              Для детей от 9 лет
-            </p> */}
-
-            {/* Этот div я убрал, так как он не использовался */}
+            <div className="">
+              <div className="">
+                <p className="font-jost text-xl/tight font-medium text-[#2E4F6C] md:text-xl xl:text-[30px]">
+                  Стоимость 11000 руб.
+                </p>
+              </div>
+              <Button className="mt-4 flex h-auto rounded-full bg-[#2e4f6c] px-10 py-2 font-jost text-sm font-medium text-white hover:bg-[#2e4f6c]/90 md:px-16 md:py-3 md:text-base xl:text-lg">
+                ЗАПИСАТЬСЯ
+              </Button>
+            </div>
           </article>
         </div>
       </section>

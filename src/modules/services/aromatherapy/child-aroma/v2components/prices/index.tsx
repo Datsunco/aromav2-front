@@ -1,3 +1,4 @@
+import { Button } from "@medusajs/ui"
 import React from "react"
 
 const Prices = () => {
@@ -24,23 +25,32 @@ const Prices = () => {
             <p className="font-jost text-xl/tight font-medium text-[#2E4F6C] md:text-xl xl:text-[30px]">
               Детская ароматерапия
             </p>
-            <ul className="list-disc space-y-1 pl-5 font-jost text-sm/tight font-light md:space-y-4 md:text-base xl:text-xl">
+            <ul className="list-disc space-y-1 pl-5 font-jost text-sm/tight font-light md:space-y-2 md:text-base xl:text-xl">
+              <li className="">Индивидуальный аромасеанс</li>
               <li className="">
-                Ванны с индивидуально подобранными эфирными маслами
-              </li>
-              <li className="">
-                Вдыхание индивидуальных ароматов через диффузор
+                Анализ физического и психологического состояния ребёнка
               </li>
               <li className="">
                 Роллер с личным ароматом для ежедневного использования
               </li>
+              <li className="">Ванны с эфирными маслами</li>
+              <li className="">
+                Вдыхание индивидуальных ароматов через диффузор
+              </li>
             </ul>
-            <p className="font-jost text-xl/tight font-medium text-[#2E4F6C] md:text-xl xl:text-[30px]">
-              Стоимость 5000 руб.
-            </p>
-            <p className="-mt-6 font-jost text-sm/tight font-light">
-              Для детей от 9 лет
-            </p>
+            <div className="">
+              <div className="">
+                <p className="font-jost text-xl/tight font-medium text-[#2E4F6C] md:text-xl xl:text-[30px]">
+                  Стоимость 5000 руб.
+                </p>
+                <p className="font-jost text-sm/tight font-light">
+                  Для детей от 9 лет
+                </p>
+              </div>
+              <Button className="mt-4 flex h-auto rounded-full bg-[#2e4f6c] px-10 py-2 font-jost text-sm font-medium text-white hover:bg-[#2e4f6c]/90 md:px-16 md:py-3 md:text-base xl:text-lg">
+                ЗАПИСАТЬСЯ
+              </Button>
+            </div>
 
             {/* Этот div я убрал, так как он не использовался */}
           </article>

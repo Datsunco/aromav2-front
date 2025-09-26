@@ -14,7 +14,7 @@ const MatrixInfo = () => {
         нужно.
       </p>
 
-      <div className="mx-8 flex flex-col gap-9 xl:gap-20">
+      <div className="mx-8 mt-10 flex flex-col gap-9 md:mt-20 xl:gap-20">
         {/* <article className="mt-6 flex items-center rounded-[20px] bg-white md:gap-10 md:bg-transparent xl:mt-10">
           <ul className="space-y-6 font-jost md:list-disc">
             <p className="hidden text-xl/none font-medium text-[#2E4F6C] md:block xl:text-3xl/none">
@@ -78,7 +78,7 @@ const MatrixInfo = () => {
             </li>
           </ul>
           <Image
-            src="/images/numerology/signs.jpg"
+            src="/images/numerology/hands.jpg"
             alt=""
             width={140}
             height={126}

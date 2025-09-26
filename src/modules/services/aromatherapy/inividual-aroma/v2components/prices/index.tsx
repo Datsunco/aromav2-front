@@ -26,9 +26,10 @@ const courses: Course[] = [
     // users: "3-5 чел",
     // time: "1.5 час",
     points: [
-      "Подробный анализ физического и психологического состояния",
-      "Создание ресурсных духов с индивидуальными ароматами",
-      "Создание целого набора личных кремов",
+      "Индивидуальный аромасеанс",
+      "Подробный анализ вашеоо физического и психологического состояния ",
+      "Создание ресурсного аромата",
+      "Создание индивидуального набора кремов для тела",
     ],
     link: "/name-energy",
     style: "pb-16",
@@ -42,9 +43,9 @@ const courses: Course[] = [
     // users: "3-5 чел",
     // time: "1.5 час",
     points: [
-      "Аромасеанс",
+      "Индивидуальный аромасеанс",
+      "Создание ресурсного аромата",
       "Гармонизация состояния",
-      "Роллер с личным ресурсным ароматом",
     ],
     link: "/name-energy",
     style: "pb-28",
@@ -58,7 +59,7 @@ const CourseCard = React.memo(({ course }: { course: Course }) => {
   return (
     <div
       className={cn(
-        "group relative h-[400px] w-full transform-gpu cursor-pointer overflow-hidden rounded-[40px] shadow-lg transition-all duration-300 md:h-[480px]",
+        "group relative h-[400px] w-full transform-gpu cursor-pointer overflow-hidden rounded-[40px] shadow-lg transition-all duration-300 md:h-[500px]",
         // Так как isCenter больше нет, я убрал тернарные операторы и оставил только нужные стили
         "z-10 scale-100 md:scale-105" // Немного скорректировал scale для статичного отображения
       )}
@@ -124,7 +125,7 @@ const Prices = () => {
       <section className="mx-auto mt-14 flex max-w-5xl flex-col items-center justify-center px-4 xl:mt-24">
         <h2 className="max-w-xl text-center font-acrom text-[30px] font-bold md:text-[35px]/none xl:text-[45px]/none">
           <span className="font-kurale font-normal text-[#2E4F6C]">
-            Программа для двоих
+            Варианты
           </span>
         </h2>
 

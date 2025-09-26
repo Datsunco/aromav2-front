@@ -21,10 +21,10 @@ const tabs = [
     value: "products",
     label: "Товары",
   },
-  {
-    value: "other",
-    label: "Что-то еще",
-  },
+  // {
+  //   value: "other",
+  //   label: "Что-то еще",
+  // },
 ]
 
 const services = [
@@ -44,13 +44,13 @@ const services = [
     value: "service",
     label: "Создание индивидуального парфюма",
     description: "Создание индивидуального парфюма",
-    image: "/images/home/tabs/parf.png",
+    image: "/images/home/tabs/parf2.jpg",
   },
   {
     value: "service",
     label: "Создание ресурсного аромата",
     description: "Создание ресурсного аромата",
-    image: "/images/home/tabs/resource.png",
+    image: "/images/home/tabs/resource2.jpg",
   },
   {
     value: "service",
@@ -68,22 +68,22 @@ const services = [
 
 const FeaturesTabs = () => {
   return (
-    <section className="flex flex-col mt-14 xl:mt-24 max-w-5xl mx-auto items-center justify-center">
-      <h2 className="text-[30px] md:text-[35px]/none xl:text-[45px]/none font-bold font-acrom max-w-xl text-center">
+    <section className="mx-auto mt-14 flex max-w-5xl flex-col items-center justify-center xl:mt-24">
+      <h2 className="max-w-xl text-center font-acrom text-[30px] font-bold md:text-[35px]/none xl:text-[45px]/none">
         Выберите то, что вам
         <br />
         <span className="font-literature text-[#2E4F6C]">по душе</span>
       </h2>
       <Tabs
         defaultValue={tabs[0].value}
-        className="mt-12  w-[300px] md:w-[593px] xl:w-[932px] xl:h-[700px] h-[530px] md:h-[492px]" // w-[350px] md:w-[932px] h-[300px] md:h-[632px]
+        className="mt-12 h-[530px] w-[300px] md:h-[492px] md:w-[593px] xl:h-[700px] xl:w-[932px]" // w-[350px] md:w-[932px] h-[300px] md:h-[632px]
       >
-        <TabsList className="grid w-full grid-cols-4 bg-[#F5F5F5] rounded-[40px] h-[50px] px-1 gap-1 lg:gap-2">
+        <TabsList className="grid h-[50px] w-full grid-cols-3 gap-1 rounded-[40px] bg-[#F5F5F5] px-1 lg:gap-2">
           {tabs.map((tab) => (
             <TabsTrigger
               key={tab.value}
               value={tab.value}
-              className="font-acrom h-full text-xs rounded-[40px] data-[state=active]:bg-black data-[state=active]:text-white"
+              className="h-full rounded-[40px] font-acrom text-xs data-[state=active]:bg-black data-[state=active]:text-white"
             >
               {tab.label}
             </TabsTrigger>
@@ -98,7 +98,7 @@ const FeaturesTabs = () => {
           Что-то еще
         </TabsTrigger> */}
         <TabsContent value="service">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-2 pt-2 overflow-hidden">
+          <div className="grid grid-cols-2 gap-2 overflow-hidden pt-2 md:grid-cols-3">
             {services.map((service, index) => (
               <div key={index} className="flex-shrink-0">
                 <FeatCard
@@ -112,7 +112,7 @@ const FeaturesTabs = () => {
           </div>
         </TabsContent>
         <TabsContent value="events">
-          <div className=" grid grid-cols-2 md:grid-cols-3 gap-2 pt-2 overflow-hidden">
+          <div className="grid grid-cols-2 gap-2 overflow-hidden pt-2 md:grid-cols-3">
             {services.map((service, index) => (
               <div key={index} className="flex-shrink-0">
                 <FeatCard

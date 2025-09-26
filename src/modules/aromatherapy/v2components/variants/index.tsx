@@ -1,6 +1,7 @@
 "use client"
 
 import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react"
+import Link from "next/link"
 import React, { useCallback, useEffect, useState } from "react"
 import { flushSync } from "react-dom"
 
@@ -9,6 +10,7 @@ type AromaVariantCardProps = {
   title: string
   description: string
   duration: string
+  src: string
   image?: {
     src: string
     alt: string
@@ -22,14 +24,16 @@ const AROMA_VARIANTS_DATA: AromaVariantCardProps[] = [
     category: "Для себя",
     title: "Индивидуальный прием ароматолога",
     description:
-      "Во время консультации вы узнаете, как правильно использовать эфирные масла для улучшения настроения, сна или общего самочувствия.",
+      "Вас ждёт аромасеанс, который окажет терапевтическое действие на организм. Вы выдохните скопившееся напряжение и расслабитесь. Завершением сеанса станет создание своего ресурсного аромата.",
+    src: "/services/individual-aroma",
     duration: "2 часа",
   },
   {
     category: "Для пары",
     title: "Гармонизация отношений и ароматерапия",
     description:
-      "На совместном приёме у ароматолога вы подберёте гармонизирующие эфирные масла, которые помогут укрепить эмоциональную связь, снять напряжение и создать атмосферу доверия в ваших отношениях.",
+      "На совместном аромасеансе вы подберёте гармонизирующие эфирные масла, которые помогут снять напряжение и создать атмосферу доверия в ваших отношениях. Завершением сеанса станет создание ресурсного аромата для каждого.",
+    src: "/services/family-aroma",
     duration: "2 часа",
     image: {
       src: "/images/lavanda2.png",
@@ -40,9 +44,10 @@ const AROMA_VARIANTS_DATA: AromaVariantCardProps[] = [
   },
   {
     category: "Для семьи",
-    title: "Аромасеанс “Вмсете с мамой”",
+    title: "Аромасеанс “Вместе с мамой”",
+    src: "/services/mom-aroma",
     description:
-      "Специально подобранные эфирные масла помогут маме и ребенку раскрыть сердце друг для друга, смягчить возможные конфликты и наполнить общение нежностью и гармонией.",
+      "Совместный аромасеанс станет интересным и полезным времяпровождением. Специально подобранные эфирные масла помогут маме и ребёнку открыть сердце друг для друга, смягчить возможные конфликты и наполнить общение нежностью. Завершением сеанса станет создание ресурсного аромата для каждого.",
     duration: "2 часа",
     image: {
       src: "/images/lavanda2.png",
@@ -54,8 +59,9 @@ const AROMA_VARIANTS_DATA: AromaVariantCardProps[] = [
   {
     category: "Для ребенка",
     title: "Прием ароматолога для ребенка",
+    src: "/services/child-aroma",
     description:
-      "Ароматолог поможет подобрать нежные, детские ароматы, которые успокоят, поднимут настроение или поддержат иммунитет вашего ребёнка, превратив заботу о здоровье в приятный ритуал.",
+      "С помощью индивидуального ароматестирования ароматолог подберёт детские ароматы, которые успокоят, поднимут настроение и поддержат иммунитет вашего ребёнка. Завершением сеанса станет создание своего ресурсного аромата, что очень интересно детям.",
     duration: "2 часа",
   },
 ]
@@ -67,32 +73,35 @@ const AromaVariantCard: React.FC<AromaVariantCardProps> = ({
   description,
   duration,
   image,
+  src,
 }) => (
   <div className="relative h-full w-full md:h-auto md:max-w-[300px] xl:max-w-[550px]">
     {image && (
       <img src={image.src} alt={image.alt} className={image.className} />
     )}
-    <article className="relative z-10 flex h-full flex-col overflow-hidden rounded-[33px] bg-[#B3C3D269] p-5 pb-3 shadow-[inset_9px_9px_26.4px_0_#2E4F6C36] backdrop-blur-[2px] xl:px-12 xl:py-6">
-      <div className="mb-2 flex items-center justify-between xl:mb-4">
-        <span className="font-jost text-sm font-light xl:text-lg/none">
-          {category}
-        </span>
-        <button className="rounded-[14px] bg-[#2E4F6C] px-2.5 py-1 font-acrom text-xs font-light text-white xl:rounded-[20px] xl:px-4 xl:text-base/relaxed">
-          Подробнее
-        </button>
-      </div>
-      <p className="mb-2.5 font-jost text-xl/tight font-medium text-[#2E4F6C] xl:mb-6 xl:text-[30px]/none">
-        {title}
-      </p>
-      <p className="mb-6 font-jost text-sm font-light xl:text-xl/none">
-        {description}
-      </p>
-      <div className="mt-auto flex items-center justify-between pt-1">
-        <span className="font-jost text-sm font-light xl:text-lg/none">
-          {duration}
-        </span>
-      </div>
-    </article>
+    <Link href={src}>
+      <article className="relative z-10 flex h-full flex-col overflow-hidden rounded-[33px] bg-[#B3C3D269] p-5 pb-3 shadow-[inset_9px_9px_26.4px_0_#2E4F6C36] backdrop-blur-[2px] xl:px-12 xl:py-6">
+        <div className="mb-2 flex items-center justify-between xl:mb-4">
+          <span className="font-jost text-sm font-light xl:text-lg/none">
+            {category}
+          </span>
+          <button className="rounded-[14px] bg-[#2E4F6C] px-2.5 py-1 font-acrom text-xs font-light text-white xl:rounded-[20px] xl:px-4 xl:text-base/relaxed">
+            Подробнее
+          </button>
+        </div>
+        <p className="mb-2.5 font-jost text-xl/tight font-medium text-[#2E4F6C] xl:mb-6 xl:text-[30px]/none">
+          {title}
+        </p>
+        <p className="mb-6 font-jost text-sm font-light xl:text-xl/none">
+          {description}
+        </p>
+        <div className="mt-auto flex items-center justify-between pt-1">
+          <span className="font-jost text-sm font-light xl:text-lg/none">
+            {duration}
+          </span>
+        </div>
+      </article>
+    </Link>
   </div>
 )
 

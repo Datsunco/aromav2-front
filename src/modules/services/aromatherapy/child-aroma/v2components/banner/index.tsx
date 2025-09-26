@@ -21,6 +21,7 @@ import ListIcon from "icons/list"
 import X from "@modules/common/icons/x"
 
 import { sections } from "@modules/default/banner/data"
+import Link from "next/link"
 
 const AromaBanner = () => {
   const [mobileIsOpen, setMobileIsopen] = useState(false)
@@ -29,7 +30,9 @@ const AromaBanner = () => {
     <section className="relative mx-[22px] mt-[18px] rounded-[30px] bg-blue-origin/[77] py-4 shadow-[inset_9px_9px_26.4px_0_#2437E21A] md:mx-[25px] md:mt-[40px] md:rounded-[40px] md:py-6 md:shadow-[inset_6.1px_6.1px_17.89px_0_#2437E21A]">
       {/* Tablet & Desktop nav */}
       <nav className="hidden items-center justify-between gap-8 px-6 md:flex md:px-16">
-        <Logo className="w-24 xl:h-28 xl:w-44" />
+        <Link className="z-50" href="/">
+          <Logo className="w-24 xl:h-28 xl:w-44" />
+        </Link>
         <div className="flex gap-5 font-acrom text-sm xl:gap-8 xl:text-base">
           <a
             href="#"
@@ -62,9 +65,11 @@ const AromaBanner = () => {
       </nav>
       {/* Mobile navbar */}
       <nav className="flex items-center gap-8 px-6 md:hidden">
-        <Logo className="w-20" />
+        <Link href="/" className="z-50">
+          <Logo className="w-20" />
+        </Link>
         {/* Мобильный хедер */}
-        <div className="ml-auto mr-0 block md:hidden">
+        <div className="z-50 ml-auto mr-0 block md:hidden">
           <Dialog open={mobileIsOpen} onOpenChange={setMobileIsopen}>
             <DialogTrigger className="mr-4">
               {/* {!isOpen && } */}
@@ -99,7 +104,9 @@ const AromaBanner = () => {
                               width={180}
                               height={130}
                             /> */}
-                  <Logo className="h-[130px] w-[190px] p-2" />
+                  <Link href="/">
+                    <Logo className="z-50 h-[130px] w-[190px] p-2" />
+                  </Link>
                   <div className="flex items-center gap-4">
                     <X
                       className="h-7 w-7"
@@ -160,7 +167,7 @@ const AromaBanner = () => {
 
       {/* slogan and review */}
       <div className="flex w-full flex-row justify-between">
-        <h1 className="z-50 mb-10 px-6 text-center font-acrom text-[40px]/[36px] font-bold text-white md:mt-5 md:px-16 md:text-start md:text-4xl/[42px] lg:mb-16 xl:text-6xl/[54px]">
+        <h1 className="z-10 mb-10 px-6 text-center font-acrom text-[40px]/[36px] font-bold text-white md:mt-5 md:px-16 md:text-start md:text-4xl/[42px] lg:mb-16 xl:text-6xl/[54px]">
           <br />
           <br className="md:hidden" />
           <span className="font-kurale font-medium text-[#2E4F6C]">
@@ -174,7 +181,7 @@ const AromaBanner = () => {
 
       {/* services badges list */}
 
-      <div className="relative z-50 mb-11">
+      <div className="relative z-10 mb-11">
         <ServicesBadges sections={sections} />
       </div>
 
@@ -182,7 +189,7 @@ const AromaBanner = () => {
         src="/images/aromotherapy/v2/aroma-banner.png"
         width={160}
         height={160}
-        className="absolute bottom-8 left-1/2 z-10 aspect-square w-[90%] -translate-x-1/2 rotate-[18deg] p-6 opacity-50 blur-[1px] md:bottom-14 md:left-auto md:right-8 md:h-64 md:w-64 md:translate-x-0 md:p-0 md:opacity-100 md:blur-0 xl:bottom-10 xl:right-20 xl:h-[357px] xl:w-[357px]"
+        className="absolute bottom-8 left-1/2 z-0 aspect-square w-[90%] -translate-x-1/2 rotate-[18deg] p-6 opacity-50 blur-[1px] md:bottom-14 md:left-auto md:right-8 md:h-64 md:w-64 md:translate-x-0 md:p-0 md:opacity-100 md:blur-0 xl:bottom-10 xl:right-20 xl:h-[357px] xl:w-[357px]"
         alt="banner logo image"
       />
     </section>

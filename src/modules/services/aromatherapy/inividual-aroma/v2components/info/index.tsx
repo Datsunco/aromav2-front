@@ -5,14 +5,14 @@ const Info = () => {
   return (
     <div className="mx-auto md:max-w-3xl xl:max-w-5xl">
       <h2 className="mx-auto mb-5 mt-10 max-w-xl text-center font-kurale text-[37px]/none font-medium text-[#2E4F6C] md:mb-10 xl:mt-20 xl:text-5xl/none">
-        Ароматестирование: арома-код
+        Ароматестирование: Арома-код
         <br />
       </h2>
 
       <div className="mx-8 flex flex-col gap-9 xl:gap-20">
         <article className="flex flex-col items-center gap-10 md:flex-row">
           <Image
-            src="/images/moms_photo.jpg"
+            src="/images/moms_photo_yellow.jpg"
             alt=""
             width={140}
             height={126}

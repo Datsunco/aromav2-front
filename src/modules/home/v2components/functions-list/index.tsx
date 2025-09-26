@@ -114,10 +114,10 @@ const CourseCard = React.memo(
       // ✅ Возвращена вся оригинальная логика классов для высоты, масштаба и прозрачности
       <div
         className={cn(
-          "relative rounded-[40px] overflow-hidden group cursor-pointer transition-all duration-300 transform-gpu",
+          "group relative transform-gpu cursor-pointer overflow-hidden rounded-[40px] transition-all duration-300",
           isCenter
-            ? "h-[400px] md:h-[480px] scale-105 z-10"
-            : "h-[360px] md:h-[420px] scale-95 opacity-80"
+            ? "z-10 h-[400px] scale-105 md:h-[480px]"
+            : "h-[360px] scale-95 opacity-80 md:h-[420px]"
         )}
       >
         <Image
@@ -129,15 +129,15 @@ const CourseCard = React.memo(
           priority={course.id <= 4}
         />
         {/* ✅ Возвращена верстка оверлея, но без цветовой маски */}
-        <div className="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black/60 to-transparent">
+        <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/60 to-transparent p-6">
           {/* ✅ Возвращен блок с количеством курсов */}
-          <div className="bg-white/20 backdrop-blur-sm text-white text-xs font-medium py-1 px-3 rounded-full w-fit mb-4">
+          {/* <div className="mb-4 w-fit rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
             {pluralizeCourses(course.courses)}
-          </div>
+          </div> */}
           {/* ✅ Возвращена логика изменения размера текста */}
           <h3
             className={cn(
-              "text-white font-medium leading-tight transition-all duration-300",
+              "font-medium leading-tight text-white transition-all duration-300",
               isCenter ? "text-2xl" : "text-xl"
             )}
           >
@@ -160,7 +160,9 @@ export default function FunctionsList() {
     const onSelect = () => setSelectedIndex(api.selectedScrollSnap())
     api.on("select", onSelect)
     onSelect()
-    return () => api.off("select", onSelect)
+    return () => {
+      api.off("select", onSelect)
+    }
   }, [api])
 
   const scrollPrev = useCallback(() => api?.scrollPrev(), [api])
@@ -169,16 +171,9 @@ export default function FunctionsList() {
   return (
     <div className="mx-auto mt-24">
       {/* ✅ Возвращена верстка заголовка */}
-      <div className="mb-4 md:mb-12 text-center">
-        <h2 className="text-3xl font-acrom md:text-4xl lg:text-5xl font-bold max-w-3xl mx-auto ">
+      <div className="mb-4 text-center md:mb-12">
+        <h2 className="mx-auto max-w-3xl font-acrom text-3xl font-bold md:text-4xl lg:text-5xl">
           Исследуйте свои возможности
-
-
-
-
-
-
-
         </h2>
       </div>
 
@@ -187,7 +182,7 @@ export default function FunctionsList() {
         opts={{ align: "center", loop: true, skipSnaps: true }}
       >
         {/* ✅ Возвращена верстка контейнера слайдов */}
-        <CarouselContent className="-ml-4 py-4 min-h-[460px] md:min-h-[530px]">
+        <CarouselContent className="-ml-4 min-h-[460px] py-4 md:min-h-[530px]">
           {courses.map((course, index) => (
             <CarouselItem key={course.id} className="custom-basis pl-4">
               <Link href={`/functions${course.link}`}>
@@ -203,17 +198,17 @@ export default function FunctionsList() {
           ))}
         </CarouselContent>
         {/* ✅ Возвращена верстка кастомных кнопок навигации */}
-        <div className="flex justify-center gap-4 mt-2 md:mt-8">
-          <div className="bg-gray-200 rounded-full py-2">
+        <div className="mt-2 flex justify-center gap-4 md:mt-8">
+          <div className="rounded-full bg-gray-200 py-2">
             <button
               onClick={scrollPrev}
-              className="group static transform-none mx-2 p-2 rounded-full bg-white hover:bg-black transition-colors"
+              className="group static mx-2 transform-none rounded-full bg-white p-2 transition-colors hover:bg-black"
             >
               <ArrowIcon direction="left" />
             </button>
             <button
               onClick={scrollNext}
-              className="group static transform-none mx-2 p-2 rounded-full bg-white hover:bg-black transition-colors"
+              className="group static mx-2 transform-none rounded-full bg-white p-2 transition-colors hover:bg-black"
             >
               <ArrowIcon direction="right" />
             </button>

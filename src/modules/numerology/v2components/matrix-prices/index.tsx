@@ -1,3 +1,4 @@
+import { Button } from "@medusajs/ui"
 import React from "react"
 
 const Prices = () => {
@@ -16,7 +17,7 @@ const Prices = () => {
 
         <div className="relative mt-14 flex flex-col items-center gap-3 md:flex-row md:gap-6">
           <img
-            src="/images/numerology/human.png"
+            src="/images/numerology/xz.png"
             alt="Лаванда"
             className="absolute -top-20 right-4 z-0 flex h-[140px] w-[140px] md:-bottom-24 md:-right-32 md:h-[250px] md:w-[250px] xl:-bottom-36 xl:-right-52 xl:h-[350px] xl:w-[350px]"
           />
@@ -26,19 +27,21 @@ const Prices = () => {
             </p>
             <ul className="list-disc space-y-1 pl-5 font-jost text-sm/tight font-light md:space-y-4 md:text-base xl:text-xl">
               <li className="">
-                Помогу вам разрулить ваши проблемы и выйти на новый уровень
-                взаимоотношений.
+                Зная, для чего вы встретились, вам будет легче выстраивать
+                отношения, и легче принимать решения.
               </li>
-              <li className="">
-                Вам будет легче выстраивать отношения, и легче принимать
-                решения.
-              </li>
+
               <br />
               <br />
             </ul>
-            <p className="font-jost text-xl/tight font-medium text-[#2E4F6C] md:text-xl xl:text-[30px]">
-              6000 руб.
-            </p>
+            <div className="flex items-center justify-between">
+              <p className="font-jost text-xl/tight font-medium text-[#2E4F6C] md:text-xl xl:text-[30px]">
+                6000 руб.
+              </p>
+              <Button className="flex h-auto rounded-full bg-[#2e4f6c] px-10 py-2 font-jost text-sm font-medium text-white hover:bg-[#2e4f6c]/90 md:px-16 md:py-3 md:text-base xl:text-lg">
+                ЗАПИСАТЬСЯ
+              </Button>
+            </div>
             {/* <p className="-mt-6 font-jost text-sm/tight font-light">
               Для детей от 9 лет
             </p> */}
